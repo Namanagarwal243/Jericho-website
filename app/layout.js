@@ -3,7 +3,6 @@
 import './globals.css'
 import { useState, useEffect } from 'react'
 import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
 import SplashScreen from '@/components/SplashScreen'
 
 export default function RootLayout({ children }) {
@@ -22,21 +21,20 @@ export default function RootLayout({ children }) {
   }
 
   return (
-    <html lang="en">
+    <html lang="en" className="smooth-scroll">
       <head>
         <title>Jericho - A step ahead</title>
-        <meta name="description" content="Industrial corporate excellence" />
+        <meta name="description" content="Premium industrial conglomerate" />
         <script dangerouslySetInnerHTML={{__html:'window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);'}} />
       </head>
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen">
         {showSplash && <SplashScreen onComplete={handleSplashComplete} />}
         {!showSplash && (
           <>
             <Navigation />
-            <main className="flex-1">
+            <main className="pt-20">
               {children}
             </main>
-            <Footer />
           </>
         )}
       </body>

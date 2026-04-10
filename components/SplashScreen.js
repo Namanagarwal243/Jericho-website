@@ -11,21 +11,21 @@ export default function SplashScreen({ onComplete }) {
       setFadeOut(true)
       setTimeout(() => {
         onComplete()
-      }, 500)
-    }, 2500)
+      }, 600)
+    }, 2800)
 
     return () => clearTimeout(timer)
   }, [onComplete])
 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center bg-white ${fadeOut ? 'fade-out' : ''}`}>
+    <div className={`fixed inset-0 z-50 flex items-center justify-center bg-background ${fadeOut ? 'fade-out' : ''}`}>
       <div className="logo-grow">
         <Image
           src="https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/vf99rh9y_JERICHO%20LOGO.png"
           alt="Jericho"
-          width={600}
-          height={300}
-          className="w-auto h-auto max-w-[80vw] max-h-[40vh]"
+          width={700}
+          height={350}
+          className="w-auto h-auto max-w-[85vw] max-h-[45vh]"
           priority
         />
       </div>

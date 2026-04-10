@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,26 +6,26 @@
 
 @layer base {
   :root {
-    --background: 42 25% 97%;
-    --foreground: 140 30% 15%;
-    --card: 0 0% 100%;
-    --card-foreground: 140 30% 15%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 140 30% 15%;
-    --primary: 145 65% 32%;
-    --primary-foreground: 42 25% 97%;
-    --secondary: 42 20% 95%;
-    --secondary-foreground: 140 30% 15%;
-    --muted: 42 15% 92%;
-    --muted-foreground: 140 15% 40%;
-    --accent: 145 65% 32%;
-    --accent-foreground: 42 25% 97%;
+    --background: 140 10% 6%;
+    --foreground: 0 0% 92%;
+    --card: 140 8% 9%;
+    --card-foreground: 0 0% 92%;
+    --popover: 140 8% 9%;
+    --popover-foreground: 0 0% 92%;
+    --primary: 145 35% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 140 8% 12%;
+    --secondary-foreground: 0 0% 92%;
+    --muted: 140 8% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 145 35% 45%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
-    --border: 145 15% 88%;
-    --input: 145 15% 88%;
-    --ring: 145 65% 32%;
-    --radius: 0.25rem;
+    --border: 140 8% 20%;
+    --input: 140 8% 20%;
+    --ring: 145 35% 45%;
+    --radius: 0.5rem;
   }
 }
 
@@ -40,8 +40,8 @@
     -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
   }
 }
 
@@ -53,12 +53,8 @@
 
 @keyframes logoGrow {
   0% {
-    transform: scale(0.8);
-    opacity: 0.5;
-  }
-  50% {
-    transform: scale(1);
-    opacity: 1;
+    transform: scale(0.7);
+    opacity: 0;
   }
   100% {
     transform: scale(1);
@@ -67,7 +63,7 @@
 }
 
 .logo-grow {
-  animation: logoGrow 2s ease-out forwards;
+  animation: logoGrow 2.5s ease-out forwards;
 }
 
 @keyframes fadeOut {
@@ -78,5 +74,18 @@
 }
 
 .fade-out {
-  animation: fadeOut 0.5s ease-out forwards;
+  animation: fadeOut 0.6s ease-out forwards;
+}
+
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+@keyframes slideImage {
+  0%, 100% {
+    opacity: 1;
+  }
+  33%, 66% {
+    opacity: 0;
+  }
 }

@@ -26,7 +26,7 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="sticky top-0 z-40 bg-card border-b border-border/40 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-white shadow-sm">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -41,29 +41,24 @@ export default function Navigation() {
             />
           </Link>
 
-          {/* Desktop Navigation - Truly Centered */}
-          <div className="hidden lg:flex items-center justify-center flex-1 mx-8">
-            <div className="flex items-center gap-12">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
-                    isActive(item.href) ? 'text-primary' : 'text-foreground/80'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
+          {/* Desktop Navigation - Right Side */}
+          <div className="hidden lg:flex items-center gap-10">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`text-sm font-medium transition-colors ${
+                  isActive(item.href) ? 'text-primary' : 'text-gray-700 hover:text-primary'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
 
-          {/* Spacer for logo balance */}
-          <div className="hidden lg:block w-[180px]"></div>
-
-          {/* Mobile Menu Button - Only on Mobile */}
+          {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-foreground hover:text-primary transition-colors"
+            className="lg:hidden text-gray-900 hover:text-primary transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -74,14 +69,14 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-border/40 bg-card">
+        <div className="lg:hidden border-t border-gray-200 bg-white">
           <div className="container mx-auto px-6 py-6 space-y-4">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`block text-base font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? 'text-primary' : 'text-foreground/80'
+                className={`block text-base font-medium transition-colors ${
+                  isActive(item.href) ? 'text-primary' : 'text-gray-700 hover:text-primary'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
