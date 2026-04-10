@@ -12,13 +12,13 @@ export default function SplashScreen({ onComplete }) {
       setTimeout(() => {
         onComplete()
       }, 600)
-    }, 2800)
+    }, 3500)
 
     return () => clearTimeout(timer)
   }, [onComplete])
 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center bg-background ${fadeOut ? 'fade-out' : ''}`}>
+    <div className={`fixed inset-0 z-50 flex items-center justify-center bg-white ${fadeOut ? 'fade-out' : ''}`}>
       <div className="logo-grow">
         <Image
           src="https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/vf99rh9y_JERICHO%20LOGO.png"

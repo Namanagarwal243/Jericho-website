@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="smooth-scroll">
       <head>
-        <title>Jericho - A step ahead</title>
+        <title>Jericho - Premium Industrial Conglomerate</title>
         <meta name="description" content="Premium industrial conglomerate" />
         <script dangerouslySetInnerHTML={{__html:'window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);'}} />
       </head>
