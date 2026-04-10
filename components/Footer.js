@@ -1,44 +1,52 @@
 import Link from 'next/link'
-import ThreeDotsMotif from './ThreeDotsMotif'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-6 md:px-12 lg:px-16 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Brand Column */}
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <ThreeDotsMotif size="sm" color="cream" />
-              <span className="text-2xl font-bold">Jericho</span>
-            </div>
-            <p className="text-primary-foreground/80 text-sm">
+    <footer className="bg-white border-t border-border">
+      <div className="container mx-auto px-6 lg:px-12 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Brand */}
+          <div>
+            <Image
+              src="https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/vf99rh9y_JERICHO%20LOGO.png"
+              alt="Jericho"
+              width={160}
+              height={50}
+              className="h-10 w-auto mb-4"
+            />
+            <p className="text-sm text-muted-foreground">
               A step ahead
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4">Navigation</h3>
+            <h3 className="font-semibold mb-4 text-foreground">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/flagship" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link href="/flagship" className="text-muted-foreground hover:text-primary transition-colors">
                   Flagship Business
                 </Link>
               </li>
               <li>
-                <Link href="/businesses" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Our Businesses
+                <Link href="/businesses" className="text-muted-foreground hover:text-primary transition-colors">
+                  Other Businesses
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  About & Contact
+                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -46,41 +54,18 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2 text-sm text-primary-foreground/80">
+            <h3 className="font-semibold mb-4 text-foreground">Contact</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
               <li>info@jericho.com</li>
               <li>+1 (555) 123-4567</li>
-              <li>123 Industrial Parkway</li>
+              <li>123 Industrial Avenue</li>
               <li>City, State 12345</li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Compliance
-                </a>
-              </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>&copy; {new Date().getFullYear()} Jericho Industrial Group. All rights reserved.</p>
+        <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Jericho. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -3,8 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
-import ThreeDotsMotif from './ThreeDotsMotif'
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -12,9 +12,10 @@ export default function Navigation() {
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Flagship', href: '/flagship' },
-    { name: 'Businesses', href: '/businesses' },
-    { name: 'About', href: '/about' },
+    { name: 'Flagship Business', href: '/flagship' },
+    { name: 'Other Businesses', href: '/businesses' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact Us', href: '/contact' },
   ]
 
   const isActive = (href) => {
@@ -25,35 +26,44 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 bg-background border-b border-border">
-      <div className="container mx-auto px-6 md:px-12 lg:px-16">
+    <nav className="sticky top-0 z-40 bg-white border-b border-border shadow-sm">
+      <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <ThreeDotsMotif size="sm" color="green" />
-            <span className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-              Jericho
-            </span>
+          <Link href="/" className="flex-shrink-0">
+            <Image
+              src="https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/vf99rh9y_JERICHO%20LOGO.png"
+              alt="Jericho"
+              width={180}
+              height={60}
+              className="h-12 w-auto"
+              priority
+            />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? 'text-primary' : 'text-muted-foreground'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden lg:flex items-center justify-center flex-1">
+            <div className="flex items-center gap-10">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    isActive(item.href) ? 'text-primary' : 'text-foreground'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
           </div>
+
+          {/* Spacer for logo balance */}
+          <div className="hidden lg:block w-[180px]"></div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground hover:text-primary transition-colors"
+            className="lg:hidden text-foreground hover:text-primary transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -64,14 +74,14 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="lg:hidden border-t border-border bg-white">
           <div className="container mx-auto px-6 py-6 space-y-4">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`block text-lg font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? 'text-primary' : 'text-muted-foreground'
+                className={`block text-base font-medium transition-colors hover:text-primary ${
+                  isActive(item.href) ? 'text-primary' : 'text-foreground'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >

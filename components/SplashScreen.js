@@ -1,0 +1,34 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
+
+export default function SplashScreen({ onComplete }) {
+  const [fadeOut, setFadeOut] = useState(false)
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFadeOut(true)
+      setTimeout(() => {
+        onComplete()
+      }, 500)
+    }, 2500)
+
+    return () => clearTimeout(timer)
+  }, [onComplete])
+
+  return (
+    <div className={`fixed inset-0 z-50 flex items-center justify-center bg-white ${fadeOut ? 'fade-out' : ''}`}>
+      <div className="logo-grow">
+        <Image
+          src="https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/vf99rh9y_JERICHO%20LOGO.png"
+          alt="Jericho"
+          width={600}
+          height={300}
+          className="w-auto h-auto max-w-[80vw] max-h-[40vh]"
+          priority
+        />
+      </div>
+    </div>
+  )
+}
