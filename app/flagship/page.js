@@ -10,10 +10,10 @@ export default function FlagshipPage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="bg-white py-24 md:py-32 lg:py-40">
+      <section className="bg-card py-28 md:py-36 lg:py-44">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tight text-foreground">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-10 tracking-tight text-foreground leading-tight">
               Jericho Foods and Beverages LLP
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
@@ -24,13 +24,13 @@ export default function FlagshipPage() {
       </section>
 
       {/* Image Gallery */}
-      <section className="py-16 md:py-20 bg-muted/30">
+      <section className="py-20 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {imageGallery.map((image, index) => (
               <div
                 key={image.id}
-                className={`bg-white border border-border aspect-video flex items-center justify-center ${
+                className={`bg-card border border-border/50 aspect-video flex items-center justify-center ${
                   index === 0 ? 'lg:col-span-2 lg:row-span-2' : ''
                 }`}
               >
@@ -42,10 +42,10 @@ export default function FlagshipPage() {
       </section>
 
       {/* Overview Section */}
-      <section className="py-20 md:py-24 bg-white">
+      <section className="py-24 md:py-32 bg-card">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground">
               Overview
             </h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
@@ -64,14 +64,14 @@ export default function FlagshipPage() {
       </section>
 
       {/* What We Do Section */}
-      <section className="py-20 md:py-24 bg-muted/30">
+      <section className="py-24 md:py-32 bg-secondary/30">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mb-14 text-foreground">
               What We Do
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white border border-border p-8">
+              <div className="bg-card border border-border/50 p-10">
                 <h3 className="text-xl font-semibold mb-4 text-foreground">
                   Food Manufacturing
                 </h3>
@@ -79,7 +79,7 @@ export default function FlagshipPage() {
                   Complete food production services from processing to packaging, with strict adherence to safety and quality standards.
                 </p>
               </div>
-              <div className="bg-white border border-border p-8">
+              <div className="bg-card border border-border/50 p-10">
                 <h3 className="text-xl font-semibold mb-4 text-foreground">
                   Beverage Production
                 </h3>
@@ -87,7 +87,7 @@ export default function FlagshipPage() {
                   Advanced beverage manufacturing capabilities including formulation, bottling, and quality control systems.
                 </p>
               </div>
-              <div className="bg-white border border-border p-8">
+              <div className="bg-card border border-border/50 p-10">
                 <h3 className="text-xl font-semibold mb-4 text-foreground">
                   Quality Assurance
                 </h3>
@@ -95,7 +95,7 @@ export default function FlagshipPage() {
                   Comprehensive testing and certification processes ensuring compliance with international food safety standards.
                 </p>
               </div>
-              <div className="bg-white border border-border p-8">
+              <div className="bg-card border border-border/50 p-10">
                 <h3 className="text-xl font-semibold mb-4 text-foreground">
                   Supply Chain Integration
                 </h3>

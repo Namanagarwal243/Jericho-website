@@ -26,7 +26,7 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="sticky top-0 z-40 bg-white border-b border-border shadow-sm">
+    <nav className="sticky top-0 z-40 bg-card border-b border-border/40 shadow-sm">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -36,20 +36,20 @@ export default function Navigation() {
               alt="Jericho"
               width={180}
               height={60}
-              className="h-12 w-auto"
+              className="h-11 w-auto"
               priority
             />
           </Link>
 
-          {/* Desktop Navigation - Centered */}
-          <div className="hidden lg:flex items-center justify-center flex-1">
-            <div className="flex items-center gap-10">
+          {/* Desktop Navigation - Truly Centered */}
+          <div className="hidden lg:flex items-center justify-center flex-1 mx-8">
+            <div className="flex items-center gap-12">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={`text-sm font-medium transition-colors hover:text-primary ${
-                    isActive(item.href) ? 'text-primary' : 'text-foreground'
+                    isActive(item.href) ? 'text-primary' : 'text-foreground/80'
                   }`}
                 >
                   {item.name}
@@ -61,7 +61,7 @@ export default function Navigation() {
           {/* Spacer for logo balance */}
           <div className="hidden lg:block w-[180px]"></div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Only on Mobile */}
           <button
             className="lg:hidden text-foreground hover:text-primary transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -74,14 +74,14 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-border bg-white">
+        <div className="lg:hidden border-t border-border/40 bg-card">
           <div className="container mx-auto px-6 py-6 space-y-4">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={`block text-base font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? 'text-primary' : 'text-foreground'
+                  isActive(item.href) ? 'text-primary' : 'text-foreground/80'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >

@@ -3,9 +3,9 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-border">
-      <div className="container mx-auto px-6 lg:px-12 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-card border-t border-border/40">
+      <div className="container mx-auto px-6 lg:px-12 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
             <Image
@@ -15,7 +15,7 @@ export default function Footer() {
               height={50}
               className="h-10 w-auto mb-4"
             />
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
               A step ahead
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
+        <div className="border-t border-border/40 mt-12 pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Jericho. All rights reserved.</p>
         </div>
       </div>

@@ -64,9 +64,9 @@ export default function BusinessesPage() {
   return (
     <div className="w-full">
       {/* Header Section */}
-      <section className="bg-white py-20 md:py-24">
+      <section className="bg-card py-24 md:py-28">
         <div className="container mx-auto px-6 lg:px-12">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight text-foreground">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tight text-foreground">
             Other Businesses
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl">
@@ -76,21 +76,21 @@ export default function BusinessesPage() {
       </section>
 
       {/* Businesses List */}
-      <section className="py-16 md:py-20 bg-muted/30">
+      <section className="py-20 md:py-24 bg-secondary/30">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-5xl mx-auto space-y-6">
             {businesses.map((business) => (
               <div
                 key={business.id}
-                className={`bg-white border border-border transition-all duration-300 ${
-                  expandedId === business.id ? 'shadow-lg' : expandedId !== null ? 'opacity-40' : 'hover:border-primary'
+                className={`bg-card border border-border/50 transition-all duration-300 ${
+                  expandedId === business.id ? 'shadow-lg' : expandedId !== null ? 'opacity-40' : 'hover:border-primary/60'
                 }`}
               >
                 {/* Card Header */}
-                <div className="p-8">
-                  <div className="flex items-start justify-between gap-4 mb-4">
+                <div className="p-10">
+                  <div className="flex items-start justify-between gap-4 mb-5">
                     <div className="flex-1">
-                      <h2 className="text-2xl font-bold text-foreground mb-2">
+                      <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
                         {business.name}
                       </h2>
                       <p className="text-sm text-muted-foreground uppercase tracking-wide">
@@ -98,7 +98,7 @@ export default function BusinessesPage() {
                       </p>
                     </div>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6 text-base">
                     {business.overview}
                   </p>
                   {expandedId !== business.id && (
@@ -113,17 +113,17 @@ export default function BusinessesPage() {
 
                 {/* Expanded Content */}
                 {expandedId === business.id && (
-                  <div className="border-t border-border bg-muted/20 p-8 relative">
+                  <div className="border-t border-border/50 bg-secondary/20 p-10 relative">
                     <button
                       onClick={() => toggleExpand(business.id)}
-                      className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
+                      className="absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors"
                       aria-label="Close"
                     >
-                      <X size={20} />
+                      <X size={22} />
                     </button>
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 pr-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 pr-10">
                       <div className="lg:col-span-2 space-y-4">
-                        <h3 className="text-lg font-semibold text-foreground mb-4">
+                        <h3 className="text-lg font-semibold text-foreground mb-5">
                           Detailed Overview
                         </h3>
                         <p className="text-muted-foreground leading-relaxed">
@@ -132,7 +132,7 @@ export default function BusinessesPage() {
                       </div>
                       {business.hasImage && (
                         <div className="lg:col-span-1">
-                          <div className="bg-white border border-border aspect-square flex items-center justify-center">
+                          <div className="bg-card border border-border/50 aspect-square flex items-center justify-center">
                             <span className="text-sm text-muted-foreground">
                               {business.name}
                             </span>
