@@ -26,9 +26,9 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-white shadow-sm">
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-white/98 backdrop-blur-sm shadow-sm">
+      <div className="container mx-auto px-8 lg:px-16">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
@@ -36,22 +36,25 @@ export default function Navigation() {
               alt="Jericho"
               width={180}
               height={60}
-              className="h-11 w-auto"
+              className="h-12 w-auto"
               priority
             />
           </Link>
 
           {/* Desktop Navigation - Right Side */}
-          <div className="hidden lg:flex items-center gap-10">
+          <div className="hidden lg:flex items-center gap-12">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm font-medium transition-all duration-300 relative group ${
                   isActive(item.href) ? 'text-primary' : 'text-gray-700 hover:text-primary'
                 }`}
               >
                 {item.name}
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                  isActive(item.href) ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
               </Link>
             ))}
           </div>

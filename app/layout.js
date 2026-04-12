@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         {!showSplash && (
           <>
             <Navigation />
-            <main className="pt-20">
+            <main className="pt-24">
               {children}
             </main>
           </>
