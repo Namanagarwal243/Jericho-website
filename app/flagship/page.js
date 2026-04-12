@@ -52,122 +52,171 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Overview Section - MOVED UP */}
+      {/* Overview Section - 2-Column Layout */}
       <section className="py-24 md:py-28 bg-white px-6">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
-            Overview
-          </h2>
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              Jericho Foods and Beverages LLP is the flagship manufacturing arm of the group, operating in collaboration with Reliance Consumer Products Ltd. (RCPL).
-            </p>
-            <p>
-              The facility is designed for large-scale beverage production with a focus on operational efficiency, consistency, and supply reliability.
-            </p>
-            <p>
-              The plant is structured to support large-scale production through multiple specialized bottling lines, ensuring consistent output across product categories.
-            </p>
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-[650px]">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
+                Overview
+              </h2>
+              <ul className="space-y-4 text-base text-muted-foreground">
+                <li className="flex items-start">
+                  <span className="text-primary mr-3 mt-1">•</span>
+                  <span>Flagship manufacturing arm in collaboration with Reliance Consumer Products Ltd. (RCPL)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-3 mt-1">•</span>
+                  <span>Large-scale beverage production focused on operational efficiency and consistency</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-3 mt-1">•</span>
+                  <span>Multiple specialized bottling lines ensuring consistent output across product categories</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-secondary/20 aspect-video flex items-center justify-center rounded-lg border border-border/20">
+              <span className="text-muted-foreground text-sm">Manufacturing Facility</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section - 3 White Cards */}
+      {/* Stats Section - Labels Above Boxes */}
       <section className="py-24 md:py-28 bg-secondary/30 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-white border border-gray-200 rounded-xl p-12 text-center shadow-lg">
-              <p className="text-5xl font-bold text-foreground mb-4">
-                9 lakh sq. ft.
-              </p>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">
+            <div className="text-center">
+              <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-4">
                 LAND AREA
               </p>
+              <div className="bg-white border border-gray-200 rounded-xl p-12 shadow-lg">
+                <p className="text-5xl font-bold text-foreground">
+                  9 lakh sq. ft.
+                </p>
+              </div>
             </div>
-            <div className="bg-white border border-gray-200 rounded-xl p-12 text-center shadow-lg">
-              <p className="text-5xl font-bold text-foreground mb-4">
-                ₹450 crore
-              </p>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">
+            <div className="text-center">
+              <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-4">
                 INVESTMENT
               </p>
+              <div className="bg-white border border-gray-200 rounded-xl p-12 shadow-lg">
+                <p className="text-5xl font-bold text-foreground">
+                  ₹450 crore
+                </p>
+              </div>
             </div>
-            <div className="bg-white border border-gray-200 rounded-xl p-12 text-center shadow-lg">
-              <p className="text-5xl font-bold text-foreground mb-4">
-                400+
-              </p>
-              <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">
+            <div className="text-center">
+              <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-4">
                 EMPLOYMENT
               </p>
+              <div className="bg-white border border-gray-200 rounded-xl p-12 shadow-lg">
+                <p className="text-5xl font-bold text-foreground">
+                  400+
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Operational Strength Section - NEW */}
-      <section className="py-24 md:py-28 bg-white px-6">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground">
-            Operational Strength
-          </h2>
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              Built on substantial land infrastructure and capital investment, the plant is equipped to handle high-volume operations with streamlined processes across production, storage, and dispatch.
-            </p>
-            <p>
-              The facility operates exclusively for RCPL products, ensuring focused execution and alignment with brand standards while maintaining operational excellence across all production lines.
-            </p>
+      {/* Highlight Strip */}
+      <section className="py-8 bg-primary/5 border-y border-primary/10">
+        <div className="container mx-auto max-w-4xl text-center">
+          <p className="text-lg md:text-xl font-semibold text-foreground">
+            Built for scale. Designed for consistency. Trusted by RCPL.
+          </p>
+        </div>
+      </section>
+
+      {/* Key Capabilities - 3 Horizontal Blocks */}
+      <section className="py-20 bg-white px-6">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                Bottling Infrastructure
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Multiple specialized bottling lines for CSD, PDW, and juice production
+              </p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                Product Capabilities
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Manufacturing across Campa, Independence, and Raskik brands
+              </p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-foreground mb-3">
+                Distribution Network
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Strategic APOB for Assam and adjoining regional markets
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Manufacturing Excellence Section */}
+      {/* Operational Strength - 2-Column Layout */}
       <section className="py-24 md:py-28 bg-secondary/30 px-6">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground">
-            Manufacturing Excellence
-          </h2>
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              The facility is engineered for precision manufacturing with state-of-the-art production infrastructure designed to meet stringent quality standards and production efficiency requirements.
-            </p>
-            <p>
-              Advanced automation systems and quality control protocols ensure consistent product output while maintaining operational reliability across all manufacturing processes.
-            </p>
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="bg-secondary/20 aspect-video flex items-center justify-center rounded-lg border border-border/20">
+              <span className="text-muted-foreground text-sm">Operations Infrastructure</span>
+            </div>
+            <div className="max-w-[650px]">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
+                Operational Strength
+              </h2>
+              <ul className="space-y-4 text-base text-muted-foreground">
+                <li className="flex items-start">
+                  <span className="text-primary mr-3 mt-1">•</span>
+                  <span>High-volume operations with streamlined processes across production, storage, and dispatch</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-3 mt-1">•</span>
+                  <span>Exclusive focus on RCPL products ensuring brand alignment and operational excellence</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-3 mt-1">•</span>
+                  <span>Substantial land infrastructure and capital investment supporting scalable growth</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Product Capabilities Section */}
+      {/* Manufacturing Excellence - 2-Column Layout */}
       <section className="py-24 md:py-28 bg-white px-6">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground">
-            Product Capabilities
-          </h2>
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              The facility includes two carbonated soft drink (CSD) bottling lines, manufacturing products such as Campa Cola, Campa Orange, Campa Lemon, Power-Up, and Berry Kick.
-            </p>
-            <p>
-              In addition, a packaged drinking water (PDW) line is dedicated to the production of the Independence brand, while a separate hot-fill line is utilized for juice manufacturing under the Raskik brand.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Distribution & Reach Section */}
-      <section className="py-24 md:py-28 bg-secondary/30 px-6">
-        <div className="container mx-auto max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground">
-            Distribution & Reach
-          </h2>
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-            <p>
-              The site also serves as an Additional Place of Business (APOB), supporting the distribution of RCPL products across Assam and adjoining regions.
-            </p>
-            <p>
-              Our strategic location and efficient logistics infrastructure enable reliable supply chain management and timely product delivery across designated markets.
-            </p>
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-[650px]">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
+                Manufacturing Excellence
+              </h2>
+              <ul className="space-y-4 text-base text-muted-foreground">
+                <li className="flex items-start">
+                  <span className="text-primary mr-3 mt-1">•</span>
+                  <span>State-of-the-art production infrastructure meeting stringent quality standards</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-3 mt-1">•</span>
+                  <span>Advanced automation systems ensuring consistent product output</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-3 mt-1">•</span>
+                  <span>Quality control protocols maintaining operational reliability</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-secondary/20 aspect-video flex items-center justify-center rounded-lg border border-border/20">
+              <span className="text-muted-foreground text-sm">Production Floor</span>
+            </div>
           </div>
         </div>
       </section>

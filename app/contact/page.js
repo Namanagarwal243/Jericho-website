@@ -72,7 +72,7 @@ export default function ContactPage() {
               {/* Top Left - Title */}
               <div>
                 <h3 className="text-2xl font-bold text-foreground">
-                  Jericho Group<br />Head Office
+                  Contact Person –<br />Mr. Ajay Verma
                 </h3>
               </div>
 
@@ -123,28 +123,30 @@ export default function ContactPage() {
             {contacts.map((contact, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-xl p-8 shadow-md transition-all duration-300 hover:shadow-lg"
+                className="bg-white border border-gray-200 rounded-xl p-8 shadow-md transition-all duration-300 hover:shadow-lg flex flex-col"
               >
-                <h3 className="text-lg font-bold text-foreground mb-6">
+                <h3 className="text-lg font-bold text-foreground mb-6 min-h-[3.5rem] flex items-start">
                   {contact.name}
                 </h3>
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-sm text-primary font-semibold mb-4">
+                <div className="flex-1 flex flex-col">
+                  <div className="mb-6">
+                    <p className="text-sm text-primary font-semibold">
                       For more details
                     </p>
                   </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Contact Person</p>
-                    <p className="text-sm text-foreground">{contact.person}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Phone Number</p>
-                    <p className="text-sm text-foreground">{contact.phone}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Email ID</p>
-                    <p className="text-sm text-foreground break-all">{contact.email}</p>
+                  <div className="space-y-4">
+                    <div>
+                      <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Contact Person</p>
+                      <p className="text-sm text-foreground">{contact.person}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Phone Number</p>
+                      <p className="text-sm text-foreground">{contact.phone}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Email ID</p>
+                      <p className="text-sm text-foreground break-all">{contact.email}</p>
+                    </div>
                   </div>
                 </div>
               </div>

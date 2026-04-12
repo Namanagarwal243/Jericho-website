@@ -16,10 +16,10 @@ export default function BusinessesPage() {
     },
     {
       id: 2,
-      name: 'Jericho Wines',
-      industry: 'Wine Retail',
-      overview: 'Established retail liquor outlet operating since 1998, built on long-standing market presence and customer relationships.',
-      description: 'Established in 1998, Jericho Wines has built a long-standing presence in the retail liquor sector. The outlet operates with a focus on product selection and customer service, serving a consistent client base over more than two decades. The business maintains reliable supply relationships and operates within regulatory compliance standards. Jericho Wines has developed regional recognition through sustained operations and market positioning.',
+      name: 'Jericho Chemicals LLP',
+      industry: 'Warehousing',
+      overview: 'Large-scale warehouse facility providing storage and logistics support for chemical and industrial products.',
+      description: 'Jericho Chemicals LLP operates a purpose-built warehouse facility designed for the storage and handling of chemical and industrial products. The infrastructure includes controlled storage environments, material handling systems, and safety protocols aligned with warehousing standards. The facility serves as a logistics hub for inventory management and distribution support. Operations are structured to handle diverse storage requirements while maintaining compliance with safety and regulatory guidelines.',
     },
     {
       id: 3,
@@ -30,10 +30,10 @@ export default function BusinessesPage() {
     },
     {
       id: 4,
-      name: 'Jericho Chemicals LLP',
-      industry: 'Warehousing',
-      overview: 'Large-scale warehouse facility providing storage and logistics support for chemical and industrial products.',
-      description: 'Jericho Chemicals LLP operates a purpose-built warehouse facility designed for the storage and handling of chemical and industrial products. The infrastructure includes controlled storage environments, material handling systems, and safety protocols aligned with warehousing standards. The facility serves as a logistics hub for inventory management and distribution support. Operations are structured to handle diverse storage requirements while maintaining compliance with safety and regulatory guidelines.',
+      name: 'Jericho Wines',
+      industry: 'Wine Retail',
+      overview: 'Established retail liquor outlet operating since 1998, built on long-standing market presence and customer relationships.',
+      description: 'Established in 1998, Jericho Wines has built a long-standing presence in the retail liquor sector. The outlet operates with a focus on product selection and customer service, serving a consistent client base over more than two decades. The business maintains reliable supply relationships and operates within regulatory compliance standards. Jericho Wines has developed regional recognition through sustained operations and market positioning.',
     },
     {
       id: 5,
