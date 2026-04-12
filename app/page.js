@@ -20,8 +20,8 @@ export default function Home() {
       {/* Hero Section - Full Width Image Slider */}
       <HeroSlider />
 
-      {/* Company Overview Section */}
-      <section className="py-32 md:py-40 bg-secondary/30 px-6">
+      {/* Company Overview Section - WHITE BACKGROUND */}
+      <section className="py-32 md:py-40 bg-white px-6">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-5xl md:text-6xl font-bold mb-16 text-foreground">
             Company Overview
@@ -51,8 +51,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Approach Section */}
-      <section className="py-32 md:py-40 bg-card px-6">
+      {/* Our Approach Section - LIGHT BACKGROUND */}
+      <section className="py-32 md:py-40 bg-secondary/50 px-6">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-5xl md:text-6xl font-bold mb-20 text-foreground text-center">
             Our Approach
@@ -80,8 +80,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Businesses Section */}
-      <section className="py-32 md:py-40 bg-background px-6">
+      {/* Our Businesses Section - WHITE BACKGROUND WITH WHITE CARDS */}
+      <section className="py-32 md:py-40 bg-white px-6">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-5xl md:text-6xl font-bold mb-20 text-foreground text-center">
             Our Businesses
@@ -91,7 +91,7 @@ export default function Home() {
               <Link
                 key={index}
                 href={business.href}
-                className="group bg-card rounded-lg p-10 flex flex-col items-center justify-center text-center min-h-[220px] transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 hover:bg-secondary/50 cursor-pointer border border-border/50 hover:border-primary/50"
+                className="group bg-white rounded-xl p-10 flex flex-col items-center justify-center text-center min-h-[220px] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer border border-border shadow-md"
               >
                 <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                   {business.name}
