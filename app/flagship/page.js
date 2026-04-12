@@ -44,13 +44,10 @@ export default function FlagshipPage() {
         
         {/* Content */}
         <div className="relative z-20 h-full flex items-center justify-center px-6">
-          <div className="max-w-5xl text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
               Jericho Foods and Beverages LLP
             </h1>
-            <p className="text-xl md:text-2xl text-white/95">
-              Scalable Beverage Manufacturing in Strategic Collaboration with RCPL
-            </p>
           </div>
         </div>
       </section>

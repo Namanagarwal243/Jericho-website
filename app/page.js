@@ -125,7 +125,7 @@ function HeroSlider() {
   }, [slides.length])
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-[80vh] w-full overflow-hidden">
       {/* Background Slider */}
       {slides.map((slide, index) => (
         <div
@@ -143,6 +143,18 @@ function HeroSlider() {
       
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/50 z-10"></div>
+      
+      {/* Centered Text */}
+      <div className="relative z-20 h-full flex items-center justify-center px-6">
+        <div className="text-center">
+          <p className="text-lg md:text-xl text-white/80 mb-4 tracking-wide">
+            Jericho Group
+          </p>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
+            A diversified business collective
+          </h1>
+        </div>
+      </div>
     </section>
   )
 }
