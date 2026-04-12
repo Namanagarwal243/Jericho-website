@@ -1,52 +1,52 @@
 export default function ContactPage() {
   const contacts = [
     {
-      name: 'Jericho Foods and Beverages LLP',
-      person: 'Contact Person Name',
-      phone: '+91 XXX XXX XXXX',
-      email: 'contact@jerichofoods.com',
+      name: 'Jericho Foods and Beverages',
+      person: 'Mr. Parijat Mahanta',
+      phone: '+91 9854049452',
+      email: 'parijat.mahanta@jericho.co.in',
     },
     {
       name: 'Jerichem Pvt Ltd',
-      person: 'Contact Person Name',
-      phone: '+91 XXX XXX XXXX',
-      email: 'info@jerichem.com',
+      person: 'Mr. Ajay Verma',
+      phone: '+91 9085903455',
+      email: 'ajay.verma@jericho.co.in',
     },
     {
       name: 'Jericho Chemicals LLP',
-      person: 'Contact Person Name',
-      phone: '+91 XXX XXX XXXX',
-      email: 'contact@jerichochemicals.com',
+      person: 'Mr. Ajay Verma',
+      phone: '+91 9085903455',
+      email: 'ajay.verma@jericho.co.in',
     },
     {
       name: 'Jericho Distributor',
-      person: 'Contact Person Name',
-      phone: '+91 XXX XXX XXXX',
-      email: 'info@jerichodistributor.com',
+      person: 'Mr. Ajay Verma',
+      phone: '+91 9085903455',
+      email: 'ajay.verma@jericho.co.in',
     },
     {
       name: 'Azure Hospitality',
-      person: 'Contact Person Name',
-      phone: '+91 XXX XXX XXXX',
-      email: 'reservations@azurehospitality.com',
+      person: 'Mr. Ajay Verma',
+      phone: '+91 9085903455',
+      email: 'ajay.verma@jericho.co.in',
     },
     {
       name: 'Amaze Hospitality',
-      person: 'Contact Person Name',
-      phone: '+91 XXX XXX XXXX',
-      email: 'events@amazehospitality.com',
-    },
-    {
-      name: 'Jericho Wines',
-      person: 'Contact Person Name',
-      phone: '+91 XXX XXX XXXX',
-      email: 'sales@jerichowines.com',
+      person: 'Mr. Ajay Verma',
+      phone: '+91 9085903455',
+      email: 'ajay.verma@jericho.co.in',
     },
     {
       name: 'SR Associates',
-      person: 'Contact Person Name',
-      phone: '+91 XXX XXX XXXX',
-      email: 'consulting@srassociates.com',
+      person: 'Mr. Ajay Verma',
+      phone: '+91 9085903455',
+      email: 'ajay.verma@jericho.co.in',
+    },
+    {
+      name: 'Jericho Wines',
+      person: 'Mr. Ajay Verma',
+      phone: '+91 9085903455',
+      email: 'ajay.verma@jericho.co.in',
     },
   ]
 
@@ -75,7 +75,7 @@ export default function ContactPage() {
                 </h3>
                 <div className="space-y-4">
                   <div>
-                    <p className="text-sm text-primary font-semibold mb-2">
+                    <p className="text-sm text-primary font-semibold mb-4">
                       For more details
                     </p>
                   </div>

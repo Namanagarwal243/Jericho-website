@@ -10,44 +10,51 @@ export default function BusinessesPage() {
     {
       id: 1,
       name: 'Jerichem Pvt Ltd',
-      overview: 'Specialized chemical manufacturing and processing',
-      description: 'Jerichem Pvt Ltd operates advanced chemical manufacturing facilities producing specialty chemicals for industrial applications. With a focus on innovation and safety, we serve diverse sectors including pharmaceuticals, agriculture, and industrial processing. Our state-of-the-art laboratories and experienced technical teams enable us to deliver customized chemical solutions meeting the most demanding specifications. We maintain comprehensive quality management systems and environmental compliance protocols across all operations.',
+      industry: 'Detergent Manufacturing',
+      overview: 'Specialized detergent manufacturing with focus on quality production standards',
+      description: 'Jerichem Pvt Ltd operates modern detergent manufacturing facilities with comprehensive production capabilities. Our operations focus on delivering consistent product quality through controlled manufacturing processes and quality assurance protocols. We serve both retail and institutional market segments with scalable production capacity.',
     },
     {
       id: 2,
       name: 'Jericho Chemicals LLP',
-      overview: 'Industrial chemical solutions and distribution',
-      description: 'Jericho Chemicals LLP provides comprehensive chemical distribution and logistics services, connecting manufacturers with end-users across multiple industries. Our extensive network ensures reliable supply chain management and timely delivery of chemical products. We maintain proper storage facilities, handling equipment, and safety protocols to manage diverse chemical inventories. Our technical support team assists customers with product selection, application guidance, and regulatory compliance requirements.',
+      industry: 'Warehousing',
+      overview: 'Professional warehousing solutions with strategic facility locations',
+      description: 'Jericho Chemicals LLP provides comprehensive warehousing services with strategically located facilities designed to handle diverse storage requirements. Our infrastructure includes climate-controlled environments, advanced inventory management systems, and efficient material handling capabilities. We ensure secure storage and timely distribution for our clients.',
     },
     {
       id: 3,
       name: 'Jericho Distributor',
-      overview: 'Multi-sector distribution and logistics network',
-      description: 'Jericho Distributor manages large-scale distribution operations across multiple product categories and geographic regions. Our integrated logistics platform combines warehousing, transportation, and inventory management capabilities to serve manufacturers and retailers efficiently. With strategically located distribution centers and advanced tracking systems, we ensure optimal supply chain performance. Our distribution network handles diverse product ranges from consumer goods to industrial supplies.',
+      industry: 'Logistics and Distribution',
+      overview: 'Integrated logistics and distribution services across regional networks',
+      description: 'Jericho Distributor manages comprehensive logistics and distribution operations serving multiple product categories. Our network combines transportation assets, warehousing facilities, and distribution management systems to ensure efficient supply chain performance. We provide end-to-end logistics solutions from warehousing to final delivery.',
     },
     {
       id: 4,
       name: 'Azure Hospitality',
-      overview: 'Premium hospitality services and experiences',
-      description: 'Azure Hospitality delivers exceptional guest experiences through our portfolio of premium hospitality properties and services. We focus on combining modern amenities with personalized service to create memorable stays for both business and leisure travelers. Our properties feature contemporary design, well-appointed accommodations, and comprehensive facilities. Professional staff training and quality service protocols ensure consistent excellence across all touchpoints.',
+      industry: 'Hospitality',
+      overview: 'Quality hospitality services with focus on guest experience',
+      description: 'Azure Hospitality delivers professional hospitality services through well-maintained properties and trained staff. Our approach combines comfortable accommodations with attentive service to meet the needs of business and leisure travelers. We maintain consistent service standards across all operations.',
     },
     {
       id: 5,
       name: 'Amaze Hospitality',
-      overview: 'Distinctive hospitality and event management',
-      description: 'Amaze Hospitality specializes in creating distinctive hospitality experiences and managing diverse events. From corporate conferences to social celebrations, we provide end-to-end event planning and execution services. Our experienced team handles venue selection, catering coordination, technical setup, and guest management. We work closely with clients to understand their vision and deliver events that exceed expectations while maintaining attention to every detail.',
+      industry: 'Hospitality',
+      overview: 'Event management and hospitality services for diverse occasions',
+      description: 'Amaze Hospitality specializes in event management and hospitality services, handling everything from planning to execution. Our team coordinates venue arrangements, catering services, and guest management for corporate and social events. We work closely with clients to deliver well-organized events that meet their specific requirements.',
     },
     {
       id: 6,
-      name: 'Jericho Wines',
-      overview: 'Premium wine selection and distribution',
-      description: 'Jericho Wines curates and distributes premium wine selections from renowned vineyards and emerging wine regions. Our portfolio includes diverse varietals catering to sophisticated palates and varied preferences. We maintain optimal storage conditions and proper handling procedures to preserve wine quality. Our sommelier-trained team provides expert guidance on wine selection, food pairing, and cellar management. Through strategic partnerships with wineries and distributors, we offer competitive pricing on exceptional wines.',
+      name: 'SR Associates',
+      industry: 'Consulting',
+      overview: 'Business consulting services focused on practical solutions',
+      description: 'SR Associates provides business consulting services to organizations seeking operational improvements and strategic guidance. Our consultants bring industry experience and analytical capabilities to address specific business challenges. We work collaboratively with client teams to develop practical recommendations and support implementation.',
     },
     {
       id: 7,
-      name: 'SR Associates',
-      overview: 'Strategic business consulting and advisory',
-      description: 'SR Associates provides strategic business consulting services to organizations seeking growth, operational improvement, and market expansion. Our consultants bring deep industry expertise and analytical rigor to complex business challenges. We offer services spanning strategy development, process optimization, market entry planning, and organizational transformation. Through collaborative engagement with client teams, we develop actionable recommendations and support implementation to achieve measurable results.',
+      name: 'Jericho Wines',
+      industry: 'Wine Retail',
+      overview: 'Premium wine retail with curated selection and expert guidance',
+      description: 'Jericho Wines operates as a specialized wine retailer offering carefully selected wines from established producers. Our retail approach combines product knowledge with customer service to assist wine enthusiasts and casual buyers. We maintain proper storage conditions and provide guidance on wine selection and food pairing.',
     },
   ]
 
@@ -91,20 +98,29 @@ export default function BusinessesPage() {
                     >
                       <X size={24} />
                     </button>
-                    <h2 className="text-3xl font-bold text-foreground mb-4 pr-12">
+                    <h2 className="text-3xl font-bold text-foreground mb-2 pr-12">
                       {business.name}
                     </h2>
-                    <p className="text-lg text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-primary font-medium mb-6">
+                      {business.industry}
+                    </p>
+                    <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                       {business.description}
                     </p>
+                    <div className="bg-secondary aspect-video flex items-center justify-center border border-border/20">
+                      <span className="text-muted-foreground text-sm">{business.name}</span>
+                    </div>
                   </div>
                 ) : (
                   /* Normal Card */
                   <div className="bg-secondary rounded-lg p-8 min-h-[240px] flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1">
                     <div>
-                      <h3 className="text-xl font-bold text-foreground mb-4">
+                      <h3 className="text-xl font-bold text-foreground mb-2">
                         {business.name}
                       </h3>
+                      <p className="text-sm text-primary font-medium mb-4">
+                        {business.industry}
+                      </p>
                       <p className="text-muted-foreground mb-6 line-clamp-2">
                         {business.overview}
                       </p>

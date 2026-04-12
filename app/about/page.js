@@ -3,12 +3,12 @@ export default function AboutPage() {
     {
       name: 'Ashis Agarwal',
       title: 'Promoter and Director',
-      bio: 'Visionary entrepreneur with extensive experience in building and scaling diversified business portfolios. Drives strategic direction and long-term growth initiatives across the conglomerate.',
+      bio: 'Ashis Agarwal serves as Promoter and Director of Jericho Group, providing strategic direction and leadership across the organization. With extensive business experience, he guides the group\'s diversified operations and long-term growth initiatives while maintaining focus on operational excellence and market development.',
     },
     {
       name: 'Beejeet Prakash',
       title: 'Managing Director',
-      bio: 'Seasoned executive responsible for operational excellence and business performance. Leads day-to-day management and ensures alignment with strategic objectives across all business units.',
+      bio: 'Beejeet Prakash serves as Managing Director, responsible for overall management and operational execution across business units. He ensures alignment with strategic objectives while driving performance improvements and maintaining strong stakeholder relationships across the organization.',
     },
   ]
 
@@ -35,7 +35,7 @@ export default function AboutPage() {
                 </div>
                 
                 {/* Details */}
-                <h2 className="text-2xl font-bold text-foreground mb-2">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                   {person.name}
                 </h2>
                 <p className="text-primary font-semibold mb-6">

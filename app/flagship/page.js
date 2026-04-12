@@ -5,21 +5,22 @@ import { useState, useEffect } from 'react'
 export default function FlagshipPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const slides = [
-    { id: 1, label: 'Manufacturing Facility' },
-    { id: 2, label: 'Production Excellence' },
-    { id: 3, label: 'Quality Standards' },
+    { id: 1, label: 'Beverage Manufacturing Excellence' },
+    { id: 2, label: 'Quality Production Standards' },
+    { id: 3, label: 'Modern Facilities' },
+    { id: 4, label: 'Distribution Network' },
   ]
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 4000)
+    }, 5000)
     return () => clearInterval(timer)
   }, [])
 
   return (
     <div className="w-full">
-      {/* Hero Section with Auto-Sliding Background */}
+      {/* Hero Section with Image Slider */}
       <section className="relative h-screen overflow-hidden">
         {/* Background Slider */}
         <div className="absolute inset-0">
@@ -41,73 +42,59 @@ export default function FlagshipPage() {
         {/* Content */}
         <div className="relative z-20 h-full flex items-center justify-center px-6">
           <div className="max-w-5xl text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 tracking-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight">
               Jericho Foods and Beverages LLP
             </h1>
           </div>
         </div>
-        
-        {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                currentSlide === index ? 'bg-primary w-8' : 'bg-white/50'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
       </section>
 
-      {/* Full Content Section */}
+      {/* Content Section */}
       <section className="py-24 md:py-32 bg-card px-6">
         <div className="container mx-auto max-w-5xl">
           <div className="space-y-16">
-            {/* Overview */}
-            <div>
-              <h2 className="text-4xl font-bold mb-8 text-foreground">
-                Overview
-              </h2>
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Jericho Foods and Beverages LLP stands as our flagship operation, representing decades of expertise in food and beverage manufacturing. With state-of-the-art production facilities and a commitment to quality, we serve both domestic and international markets.
+            {/* Section 1 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                  Manufacturing Excellence
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Jericho Foods and Beverages operates state-of-the-art beverage manufacturing facilities designed to meet the highest industry standards. Our production infrastructure combines modern technology with rigorous quality control processes.
                 </p>
-                <p>
-                  Our operations encompass the entire value chain from sourcing premium raw materials to final product delivery, ensuring consistency and excellence at every stage.
+              </div>
+              <div className="bg-secondary aspect-video flex items-center justify-center border border-border/20">
+                <span className="text-muted-foreground text-sm">Manufacturing Facility</span>
+              </div>
+            </div>
+
+            {/* Section 2 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="bg-secondary aspect-video flex items-center justify-center border border-border/20 order-2 lg:order-1">
+                <span className="text-muted-foreground text-sm">Production Process</span>
+              </div>
+              <div className="order-1 lg:order-2">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                  Quality Standards
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We maintain comprehensive quality assurance protocols throughout the production cycle, from raw material sourcing to final packaging. Our commitment to excellence ensures consistent product quality and customer satisfaction.
                 </p>
               </div>
             </div>
 
-            {/* Manufacturing Excellence */}
-            <div>
-              <h2 className="text-4xl font-bold mb-8 text-foreground">
-                Manufacturing Excellence
-              </h2>
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Our manufacturing infrastructure spans multiple facilities equipped with advanced automation and quality control systems. We maintain certifications from leading international food safety and quality organizations.
-                </p>
-                <p>
-                  Continuous investment in technology and process optimization enables us to maintain competitive advantages while adhering to the strictest quality standards.
+            {/* Section 3 */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                  Market Presence
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Through strategic distribution partnerships and efficient logistics networks, we serve diverse market segments across multiple regions. Our scalable operations enable us to meet evolving customer demands while maintaining operational efficiency.
                 </p>
               </div>
-            </div>
-
-            {/* Market Presence */}
-            <div>
-              <h2 className="text-4xl font-bold mb-8 text-foreground">
-                Market Presence
-              </h2>
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  With an extensive distribution network and strong partnerships, Jericho Foods and Beverages serves diverse customer segments including retail, institutional, and export markets.
-                </p>
-                <p>
-                  Our product portfolio continues to evolve based on market insights and consumer preferences, positioning us for sustained growth in the competitive food and beverage sector.
-                </p>
+              <div className="bg-secondary aspect-video flex items-center justify-center border border-border/20">
+                <span className="text-muted-foreground text-sm">Distribution Network</span>
               </div>
             </div>
           </div>
