@@ -71,7 +71,7 @@ export default function Home() {
               </p>
             </div>
             <div className="text-center space-y-6">
-              <h3 className="text-3xl font-bold text-foreground">Long-term partnerships</h3>
+              <h3 className="text-3xl font-bold text-foreground whitespace-nowrap">Long-term partnerships</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Strong emphasis on reliability and continuity
               </p>

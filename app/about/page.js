@@ -14,30 +14,44 @@ export default function AboutPage() {
 
   return (
     <div className="w-full min-h-screen bg-background">
-      {/* Header */}
+      {/* Header - CENTERED */}
       <section className="py-20 md:py-24 px-6">
-        <div className="container mx-auto max-w-5xl">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-8">
+        <div className="container mx-auto max-w-6xl">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-8 text-center">
             About Us
           </h1>
+        </div>
+      </section>
+
+      {/* Company Note - Clean and Structured */}
+      <section className="pb-16 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <div className="bg-white border border-gray-200 rounded-xl p-12 shadow-md">
+            <p className="text-lg text-muted-foreground leading-relaxed text-center">
+              Jericho Group operates across manufacturing, distribution, hospitality, and consulting sectors with a focus on operational excellence and strategic partnerships. Led by experienced leadership, the organization maintains a diversified portfolio while driving sustainable growth and regional market presence.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Leadership Section */}
       <section className="pb-24 px-6">
         <div className="container mx-auto max-w-5xl">
+          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
+            Leadership
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {leadership.map((person, index) => (
               <div key={index} className="bg-card rounded-lg p-10">
                 {/* Image Placeholder */}
-                <div className="w-full aspect-square bg-secondary rounded-lg mb-8 flex items-center justify-center">
-                  <span className="text-muted-foreground">Photo</span>
+                <div className="w-full aspect-square bg-secondary/30 rounded-lg mb-8 flex items-center justify-center">
+                  <span className="text-muted-foreground text-sm">Leadership Photo</span>
                 </div>
                 
                 {/* Details */}
-                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
                   {person.name}
-                </h2>
+                </h3>
                 <p className="text-primary font-semibold mb-6">
                   {person.title}
                 </p>

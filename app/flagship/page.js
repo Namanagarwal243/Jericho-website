@@ -21,7 +21,7 @@ export default function FlagshipPage() {
   return (
     <div className="w-full">
       {/* Hero Section with Real Image Slider */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative h-[80vh] overflow-hidden">
         {/* Background Slider */}
         <div className="absolute inset-0">
           {slides.map((slide, index) => (
@@ -52,33 +52,26 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Overview Section - 2-Column Layout */}
+      {/* Overview Section - Clean Layout */}
       <section className="py-24 md:py-28 bg-white px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="max-w-[650px]">
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-                Overview
-              </h2>
-              <ul className="space-y-4 text-base text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 mt-1">•</span>
-                  <span>Flagship manufacturing arm in collaboration with Reliance Consumer Products Ltd. (RCPL)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 mt-1">•</span>
-                  <span>Large-scale beverage production focused on operational efficiency and consistency</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 mt-1">•</span>
-                  <span>Multiple specialized bottling lines ensuring consistent output across product categories</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-secondary/20 aspect-video flex items-center justify-center rounded-lg border border-border/20">
-              <span className="text-muted-foreground text-sm">Manufacturing Facility</span>
-            </div>
-          </div>
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground text-center">
+            Overview
+          </h2>
+          <ul className="space-y-4 text-base text-muted-foreground max-w-3xl mx-auto">
+            <li className="flex items-start">
+              <span className="text-primary mr-3 mt-1">•</span>
+              <span>Flagship manufacturing arm in collaboration with Reliance Consumer Products Ltd. (RCPL)</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-3 mt-1">•</span>
+              <span>Large-scale beverage production focused on operational efficiency and consistency</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-3 mt-1">•</span>
+              <span>Multiple specialized bottling lines ensuring consistent output across product categories</span>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -161,63 +154,49 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Operational Strength - 2-Column Layout */}
+      {/* Operational Strength - Clean Layout */}
       <section className="py-24 md:py-28 bg-secondary/30 px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="bg-secondary/20 aspect-video flex items-center justify-center rounded-lg border border-border/20">
-              <span className="text-muted-foreground text-sm">Operations Infrastructure</span>
-            </div>
-            <div className="max-w-[650px]">
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-                Operational Strength
-              </h2>
-              <ul className="space-y-4 text-base text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 mt-1">•</span>
-                  <span>High-volume operations with streamlined processes across production, storage, and dispatch</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 mt-1">•</span>
-                  <span>Exclusive focus on RCPL products ensuring brand alignment and operational excellence</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 mt-1">•</span>
-                  <span>Substantial land infrastructure and capital investment supporting scalable growth</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground text-center">
+            Operational Strength
+          </h2>
+          <ul className="space-y-4 text-base text-muted-foreground max-w-3xl mx-auto">
+            <li className="flex items-start">
+              <span className="text-primary mr-3 mt-1">•</span>
+              <span>High-volume operations with streamlined processes across production, storage, and dispatch</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-3 mt-1">•</span>
+              <span>Exclusive focus on RCPL products ensuring brand alignment and operational excellence</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-3 mt-1">•</span>
+              <span>Substantial land infrastructure and capital investment supporting scalable growth</span>
+            </li>
+          </ul>
         </div>
       </section>
 
-      {/* Manufacturing Excellence - 2-Column Layout */}
+      {/* Manufacturing Excellence - Clean Layout */}
       <section className="py-24 md:py-28 bg-white px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="max-w-[650px]">
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-                Manufacturing Excellence
-              </h2>
-              <ul className="space-y-4 text-base text-muted-foreground">
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 mt-1">•</span>
-                  <span>State-of-the-art production infrastructure meeting stringent quality standards</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 mt-1">•</span>
-                  <span>Advanced automation systems ensuring consistent product output</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-primary mr-3 mt-1">•</span>
-                  <span>Quality control protocols maintaining operational reliability</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-secondary/20 aspect-video flex items-center justify-center rounded-lg border border-border/20">
-              <span className="text-muted-foreground text-sm">Production Floor</span>
-            </div>
-          </div>
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground text-center">
+            Manufacturing Excellence
+          </h2>
+          <ul className="space-y-4 text-base text-muted-foreground max-w-3xl mx-auto">
+            <li className="flex items-start">
+              <span className="text-primary mr-3 mt-1">•</span>
+              <span>State-of-the-art production infrastructure meeting stringent quality standards</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-3 mt-1">•</span>
+              <span>Advanced automation systems ensuring consistent product output</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-3 mt-1">•</span>
+              <span>Quality control protocols maintaining operational reliability</span>
+            </li>
+          </ul>
         </div>
       </section>
     </div>

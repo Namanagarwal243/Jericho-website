@@ -64,10 +64,10 @@ export default function BusinessesPage() {
 
   return (
     <div className="w-full min-h-screen bg-background">
-      {/* Header */}
+      {/* Header - CENTERED */}
       <section className="py-20 md:py-24 px-6">
         <div className="container mx-auto max-w-6xl">
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-8 text-center">
             Other Businesses
           </h1>
         </div>

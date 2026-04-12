@@ -61,24 +61,27 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Head Office Section - 2x2 GRID REDESIGN */}
+      {/* Head Office Section - 2x2 GRID */}
       <section className="pb-20 px-6 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-foreground mb-10 text-center">
             Head Office
           </h2>
           <div className="bg-white border border-gray-200 rounded-xl p-16 shadow-lg">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16">
-              {/* Top Left - Title */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
+              {/* Top Left - Contact Person */}
               <div>
-                <h3 className="text-2xl font-bold text-foreground">
-                  Contact Person –<br />Mr. Ajay Verma
-                </h3>
+                <p className="text-xs text-primary mb-3 uppercase tracking-wide font-semibold">
+                  CONTACT PERSON
+                </p>
+                <p className="text-lg text-foreground font-medium">
+                  Mr. Ajay Verma
+                </p>
               </div>
 
               {/* Top Right - Phone */}
               <div>
-                <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wide font-semibold">
+                <p className="text-xs text-primary mb-3 uppercase tracking-wide font-semibold">
                   PHONE NUMBER
                 </p>
                 <p className="text-lg text-foreground font-medium">
@@ -88,7 +91,7 @@ export default function ContactPage() {
 
               {/* Bottom Left - Email */}
               <div>
-                <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wide font-semibold">
+                <p className="text-xs text-primary mb-3 uppercase tracking-wide font-semibold">
                   EMAIL ID
                 </p>
                 <p className="text-lg text-foreground font-medium">
@@ -98,7 +101,7 @@ export default function ContactPage() {
 
               {/* Bottom Right - Address */}
               <div>
-                <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wide font-semibold">
+                <p className="text-xs text-primary mb-3 uppercase tracking-wide font-semibold">
                   ADDRESS
                 </p>
                 <p className="text-base text-foreground leading-relaxed">
