@@ -26,7 +26,7 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-white/98 backdrop-blur-sm shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-white border-b border-gray-200">
       <div className="container mx-auto px-8 lg:px-16">
         <div className="flex items-center justify-between h-24">
           {/* Logo */}
@@ -48,7 +48,7 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={`text-sm font-medium transition-all duration-300 relative group ${
-                  isActive(item.href) ? 'text-primary' : 'text-gray-700 hover:text-primary'
+                  isActive(item.href) ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 {item.name}

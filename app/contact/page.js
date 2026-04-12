@@ -51,7 +51,7 @@ export default function ContactPage() {
   ]
 
   return (
-    <div className="w-full min-h-screen bg-background">
+    <div className="w-full min-h-screen bg-white">
       {/* Header */}
       <section className="py-20 md:py-24 px-6">
         <div className="container mx-auto max-w-6xl">
@@ -61,14 +61,55 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Cards Grid */}
-      <section className="pb-24 px-6">
+      {/* Head Office Section */}
+      <section className="pb-16 px-6 bg-white">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-3xl font-bold text-foreground mb-8">
+            Head Office
+          </h2>
+          <div className="bg-white border border-gray-200 rounded-xl p-12 shadow-lg">
+            <h3 className="text-2xl font-bold text-foreground mb-8">
+              Jericho Group Head Office
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide">Location</p>
+                <p className="text-base text-foreground mb-6">
+                  [Location placeholder]
+                </p>
+                
+                <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide">Contact Person</p>
+                <p className="text-base text-foreground mb-6">
+                  [Contact person placeholder]
+                </p>
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide">Phone Number</p>
+                <p className="text-base text-foreground mb-6">
+                  [Phone placeholder]
+                </p>
+                
+                <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide">Email ID</p>
+                <p className="text-base text-foreground">
+                  [Email placeholder]
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Business Contact Cards Grid */}
+      <section className="py-16 md:py-20 px-6 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl font-bold text-foreground mb-12">
+            Business Units
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contacts.map((contact, index) => (
               <div
                 key={index}
-                className="bg-card rounded-lg p-8 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1"
+                className="bg-white border border-gray-200 rounded-xl p-8 shadow-md transition-all duration-300 hover:shadow-lg"
               >
                 <h3 className="text-lg font-bold text-foreground mb-6">
                   {contact.name}
@@ -80,15 +121,15 @@ export default function ContactPage() {
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground mb-1">Contact Person</p>
+                    <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Contact Person</p>
                     <p className="text-sm text-foreground">{contact.person}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground mb-1">Phone Number</p>
+                    <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Phone Number</p>
                     <p className="text-sm text-foreground">{contact.phone}</p>
                   </div>
                   <div>
-                    <p className="text-xs text-muted-foreground mb-1">Email ID</p>
+                    <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Email ID</p>
                     <p className="text-sm text-foreground break-all">{contact.email}</p>
                   </div>
                 </div>
