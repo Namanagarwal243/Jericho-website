@@ -111,16 +111,16 @@ export default function Home() {
 function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const slides = [
-    { id: 1, label: 'Industrial Excellence' },
-    { id: 2, label: 'Manufacturing Facility' },
-    { id: 3, label: 'Operational Quality' },
-    { id: 4, label: 'Business Innovation' },
+    { id: 1, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/a6m7ikni_DJI_0466.JPG' },
+    { id: 2, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/zm39y1iz_DJI_0477.JPG' },
+    { id: 3, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/e9dedkou_DJI_0500.JPG' },
+    { id: 4, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/7s0gqyvt_DJI_0508.jpg' },
   ]
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
+    }, 4500)
     return () => clearInterval(timer)
   }, [slides.length])
 
@@ -130,16 +130,19 @@ function HeroSlider() {
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 bg-secondary flex items-center justify-center transition-opacity duration-1000 ${
+          className={`absolute inset-0 transition-opacity duration-1000 ${
             currentSlide === index ? 'opacity-100' : 'opacity-0'
           }`}
-        >
-          <span className="text-muted-foreground text-sm">{slide.label}</span>
-        </div>
+          style={{
+            backgroundImage: `url(${slide.url})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
       ))}
       
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      <div className="absolute inset-0 bg-black/50 z-10"></div>
     </section>
   )
 }

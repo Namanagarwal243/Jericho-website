@@ -73,25 +73,26 @@ export default function ContactPage() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide">Location</p>
-                <p className="text-base text-foreground mb-6">
-                  [Location placeholder]
+                <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">LOCATION</p>
+                <p className="text-base text-foreground mb-6 leading-relaxed">
+                  Near House No. 43A, Momo Ghar Lane,<br />
+                  GNB Road, Ambari, Guwahati, 781001
                 </p>
                 
-                <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide">Contact Person</p>
+                <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">CONTACT PERSON</p>
                 <p className="text-base text-foreground mb-6">
-                  [Contact person placeholder]
+                  Mr. Ajay Verma
                 </p>
               </div>
               <div>
-                <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide">Phone Number</p>
+                <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">PHONE NUMBER</p>
                 <p className="text-base text-foreground mb-6">
-                  [Phone placeholder]
+                  +91 9085903455
                 </p>
                 
-                <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide">Email ID</p>
+                <p className="text-sm text-muted-foreground mb-2 uppercase tracking-wide font-semibold">EMAIL ID</p>
                 <p className="text-base text-foreground">
-                  [Email placeholder]
+                  ajay.verma@jericho.co.in
                 </p>
               </div>
             </div>

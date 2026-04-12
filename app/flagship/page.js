@@ -5,39 +5,42 @@ import { useState, useEffect } from 'react'
 export default function FlagshipPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const slides = [
-    { id: 1, label: 'Beverage Manufacturing Excellence' },
-    { id: 2, label: 'Quality Production Standards' },
-    { id: 3, label: 'Modern Facilities' },
-    { id: 4, label: 'Distribution Network' },
+    { id: 1, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/a6m7ikni_DJI_0466.JPG' },
+    { id: 2, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/zm39y1iz_DJI_0477.JPG' },
+    { id: 3, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/e9dedkou_DJI_0500.JPG' },
+    { id: 4, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/7s0gqyvt_DJI_0508.jpg' },
   ]
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
+    }, 4500)
     return () => clearInterval(timer)
   }, [slides.length])
 
   return (
     <div className="w-full">
-      {/* Hero Section with Image Slider */}
+      {/* Hero Section with Real Image Slider */}
       <section className="relative h-screen overflow-hidden">
         {/* Background Slider */}
         <div className="absolute inset-0">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
-              className={`absolute inset-0 bg-secondary flex items-center justify-center transition-opacity duration-1000 ${
+              className={`absolute inset-0 transition-opacity duration-1000 ${
                 currentSlide === index ? 'opacity-100' : 'opacity-0'
               }`}
-            >
-              <span className="text-muted-foreground text-sm">{slide.label}</span>
-            </div>
+              style={{
+                backgroundImage: `url(${slide.url})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            />
           ))}
         </div>
         
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        <div className="absolute inset-0 bg-black/55 z-10"></div>
         
         {/* Content */}
         <div className="relative z-20 h-full flex items-center justify-center px-6">
@@ -45,39 +48,39 @@ export default function FlagshipPage() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6">
               Jericho Foods and Beverages LLP
             </h1>
-            <p className="text-xl md:text-2xl text-white/90">
+            <p className="text-xl md:text-2xl text-white/95">
               Scalable Beverage Manufacturing in Strategic Collaboration with RCPL
             </p>
           </div>
         </div>
       </section>
 
-      {/* Stats Section - 3 White Cards */}
-      <section className="py-24 md:py-32 bg-white px-6">
+      {/* Stats Section - 3 White Cards (FIXED) */}
+      <section className="py-24 md:py-28 bg-white px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="bg-white border border-gray-200 rounded-xl p-12 text-center shadow-lg">
-              <p className="text-5xl md:text-6xl font-bold text-foreground mb-3">
-                + 9 lakh sq. ft.
+              <p className="text-5xl font-bold text-foreground mb-4">
+                9 lakh sq. ft.
               </p>
-              <p className="text-sm text-muted-foreground uppercase tracking-wide">
-                Land Area
+              <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">
+                LAND AREA
               </p>
             </div>
             <div className="bg-white border border-gray-200 rounded-xl p-12 text-center shadow-lg">
-              <p className="text-5xl md:text-6xl font-bold text-foreground mb-3">
-                + ₹450 crore
+              <p className="text-5xl font-bold text-foreground mb-4">
+                ₹450 crore
               </p>
-              <p className="text-sm text-muted-foreground uppercase tracking-wide">
-                Investment
+              <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">
+                INVESTMENT
               </p>
             </div>
             <div className="bg-white border border-gray-200 rounded-xl p-12 text-center shadow-lg">
-              <p className="text-5xl md:text-6xl font-bold text-foreground mb-3">
-                + 400+
+              <p className="text-5xl font-bold text-foreground mb-4">
+                400+
               </p>
-              <p className="text-sm text-muted-foreground uppercase tracking-wide">
-                Employment
+              <p className="text-xs text-muted-foreground uppercase tracking-wider font-semibold">
+                EMPLOYMENT
               </p>
             </div>
           </div>
@@ -85,8 +88,8 @@ export default function FlagshipPage() {
       </section>
 
       {/* Overview Section */}
-      <section className="py-24 md:py-32 bg-secondary/30 px-6">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-24 md:py-28 bg-secondary/30 px-6">
+        <div className="container mx-auto max-w-3xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
             Overview
           </h2>
@@ -102,9 +105,9 @@ export default function FlagshipPage() {
       </section>
 
       {/* Manufacturing Excellence Section */}
-      <section className="py-24 md:py-32 bg-white px-6">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
+      <section className="py-24 md:py-28 bg-white px-6">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground">
             Manufacturing Excellence
           </h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
@@ -119,9 +122,9 @@ export default function FlagshipPage() {
       </section>
 
       {/* Product Capabilities Section */}
-      <section className="py-24 md:py-32 bg-secondary/30 px-6">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
+      <section className="py-24 md:py-28 bg-secondary/30 px-6">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground">
             Product Capabilities
           </h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
@@ -136,9 +139,9 @@ export default function FlagshipPage() {
       </section>
 
       {/* Distribution & Reach Section */}
-      <section className="py-24 md:py-32 bg-white px-6">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
+      <section className="py-24 md:py-28 bg-white px-6">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground">
             Distribution & Reach
           </h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
