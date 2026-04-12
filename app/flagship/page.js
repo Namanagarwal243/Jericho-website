@@ -52,8 +52,8 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Overview Section - Clean Layout */}
-      <section className="py-24 md:py-28 bg-white px-6">
+      {/* Overview Section - Clean Layout - UNIFORM SPACING */}
+      <section className="py-20 bg-white px-6">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground text-center">
             Overview
@@ -75,16 +75,16 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Stats Section - Labels Above Boxes */}
-      <section className="py-24 md:py-28 bg-secondary/30 px-6">
+      {/* Stats Section - Labels Above Boxes - FIXED SIZING */}
+      <section className="py-20 bg-secondary/30 px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-4">
                 LAND AREA
               </p>
-              <div className="bg-white border border-gray-200 rounded-xl p-12 shadow-lg">
-                <p className="text-5xl font-bold text-foreground">
+              <div className="bg-white border border-gray-200 rounded-xl p-10 shadow-lg h-32 flex items-center justify-center">
+                <p className="text-4xl font-bold text-foreground whitespace-nowrap">
                   9 lakh sq. ft.
                 </p>
               </div>
@@ -93,8 +93,8 @@ export default function FlagshipPage() {
               <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-4">
                 INVESTMENT
               </p>
-              <div className="bg-white border border-gray-200 rounded-xl p-12 shadow-lg">
-                <p className="text-5xl font-bold text-foreground">
+              <div className="bg-white border border-gray-200 rounded-xl p-10 shadow-lg h-32 flex items-center justify-center">
+                <p className="text-4xl font-bold text-foreground whitespace-nowrap">
                   ₹450 crore
                 </p>
               </div>
@@ -103,8 +103,8 @@ export default function FlagshipPage() {
               <p className="text-xs text-primary uppercase tracking-wider font-semibold mb-4">
                 EMPLOYMENT
               </p>
-              <div className="bg-white border border-gray-200 rounded-xl p-12 shadow-lg">
-                <p className="text-5xl font-bold text-foreground">
+              <div className="bg-white border border-gray-200 rounded-xl p-10 shadow-lg h-32 flex items-center justify-center">
+                <p className="text-4xl font-bold text-foreground whitespace-nowrap">
                   400+
                 </p>
               </div>
@@ -113,8 +113,8 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Highlight Strip */}
-      <section className="py-8 bg-primary/5 border-y border-primary/10">
+      {/* Highlight Strip - Increased Padding */}
+      <section className="py-12 bg-primary/5 border-y border-primary/10">
         <div className="container mx-auto max-w-4xl text-center">
           <p className="text-lg md:text-xl font-semibold text-foreground">
             Built for scale. Designed for consistency. Trusted by RCPL.
@@ -122,12 +122,12 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Key Capabilities - 3 Horizontal Blocks */}
+      {/* Key Capabilities - 3 Horizontal Blocks - UNIFORM SPACING */}
       <section className="py-20 bg-white px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <h3 className="text-xl font-bold text-foreground mb-3">
+              <h3 className="text-lg font-bold text-foreground mb-3">
                 Bottling Infrastructure
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -135,7 +135,7 @@ export default function FlagshipPage() {
               </p>
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-bold text-foreground mb-3">
+              <h3 className="text-lg font-bold text-foreground mb-3">
                 Product Capabilities
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -143,7 +143,7 @@ export default function FlagshipPage() {
               </p>
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-bold text-foreground mb-3">
+              <h3 className="text-lg font-bold text-foreground mb-3">
                 Distribution Network
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -154,8 +154,8 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Operational Strength - Clean Layout */}
-      <section className="py-24 md:py-28 bg-secondary/30 px-6">
+      {/* Operational Strength - Clean Layout - UNIFORM SPACING */}
+      <section className="py-20 bg-secondary/30 px-6">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground text-center">
             Operational Strength
@@ -177,8 +177,8 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Manufacturing Excellence - Clean Layout */}
-      <section className="py-24 md:py-28 bg-white px-6">
+      {/* Manufacturing Excellence - Clean Layout - UNIFORM SPACING */}
+      <section className="py-20 bg-white px-6">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground text-center">
             Manufacturing Excellence
