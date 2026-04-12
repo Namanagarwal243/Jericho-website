@@ -16,7 +16,7 @@ export default function FlagshipPage() {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
     }, 5000)
     return () => clearInterval(timer)
-  }, [])
+  }, [slides.length])
 
   return (
     <div className="w-full">
@@ -49,52 +49,70 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Content Section */}
+      {/* Headline Section */}
+      <section className="py-20 md:py-24 bg-card px-6">
+        <div className="container mx-auto max-w-5xl text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-foreground">
+            Scalable Beverage Manufacturing in Strategic Collaboration with RCPL
+          </h2>
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+            Jericho Foods and Beverages LLP is the flagship manufacturing arm of the group, operating in collaboration with Reliance Consumer Products Ltd. (RCPL). The facility is designed for large-scale beverage production with a focus on operational efficiency, consistency, and supply reliability.
+          </p>
+        </div>
+      </section>
+
+      {/* Infrastructure & Scale Section */}
+      <section className="py-20 md:py-24 bg-background px-6">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground text-center">
+            Infrastructure & Scale
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white text-background p-12 rounded-lg text-center">
+              <h3 className="text-lg font-bold mb-2">Land Area</h3>
+              <p className="text-3xl md:text-4xl font-bold">+ 9 lakh sq. ft.</p>
+            </div>
+            <div className="bg-white text-background p-12 rounded-lg text-center">
+              <h3 className="text-lg font-bold mb-2">Investment</h3>
+              <p className="text-3xl md:text-4xl font-bold">+ ₹450 crore</p>
+            </div>
+            <div className="bg-white text-background p-12 rounded-lg text-center">
+              <h3 className="text-lg font-bold mb-2">Employment</h3>
+              <p className="text-3xl md:text-4xl font-bold">+ 400+</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Detailed Content Section */}
       <section className="py-24 md:py-32 bg-card px-6">
         <div className="container mx-auto max-w-5xl">
-          <div className="space-y-16">
-            {/* Section 1 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                  Manufacturing Excellence
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Jericho Foods and Beverages operates state-of-the-art beverage manufacturing facilities designed to meet the highest industry standards. Our production infrastructure combines modern technology with rigorous quality control processes.
+          <div className="space-y-12">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
+                Manufacturing Excellence
+              </h2>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Jericho Foods and Beverages LLP operates as a dedicated beverage manufacturing facility in collaboration with Reliance Consumer Products Ltd. (RCPL). The plant is structured to support large-scale production through multiple specialized bottling lines, ensuring consistent output across product categories.
                 </p>
-              </div>
-              <div className="bg-secondary aspect-video flex items-center justify-center border border-border/20">
-                <span className="text-muted-foreground text-sm">Manufacturing Facility</span>
-              </div>
-            </div>
-
-            {/* Section 2 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="bg-secondary aspect-video flex items-center justify-center border border-border/20 order-2 lg:order-1">
-                <span className="text-muted-foreground text-sm">Production Process</span>
-              </div>
-              <div className="order-1 lg:order-2">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                  Quality Standards
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  We maintain comprehensive quality assurance protocols throughout the production cycle, from raw material sourcing to final packaging. Our commitment to excellence ensures consistent product quality and customer satisfaction.
+                <p>
+                  The facility includes two carbonated soft drink (CSD) bottling lines, manufacturing products such as Campa Cola, Campa Orange, Campa Lemon, Power-Up, and Berry Kick. In addition, a packaged drinking water (PDW) line is dedicated to the production of the Independence brand, while a separate hot-fill line is utilized for juice manufacturing under the Raskik brand.
                 </p>
               </div>
             </div>
 
-            {/* Section 3 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                  Market Presence
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Through strategic distribution partnerships and efficient logistics networks, we serve diverse market segments across multiple regions. Our scalable operations enable us to meet evolving customer demands while maintaining operational efficiency.
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
+                Operational Infrastructure
+              </h2>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Built on substantial land infrastructure and capital investment, the plant is equipped to handle high-volume operations with streamlined processes across production, storage, and dispatch. The facility operates exclusively for RCPL products, ensuring focused execution and alignment with brand standards.
                 </p>
-              </div>
-              <div className="bg-secondary aspect-video flex items-center justify-center border border-border/20">
-                <span className="text-muted-foreground text-sm">Distribution Network</span>
+                <p>
+                  The site also serves as an Additional Place of Business (APOB), supporting the distribution of RCPL products across Assam and adjoining regions.
+                </p>
               </div>
             </div>
           </div>

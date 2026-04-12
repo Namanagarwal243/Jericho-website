@@ -51,6 +51,64 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Operational Highlights Section */}
+      <section className="py-24 md:py-32 bg-background px-6">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground text-center">
+            Operational Highlights
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white text-background p-10 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">Multi-Sector Operations</h3>
+              <p className="text-sm leading-relaxed">
+                Operating across manufacturing, distribution, hospitality, retail, and consulting.
+              </p>
+            </div>
+            <div className="bg-white text-background p-10 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">Established Network</h3>
+              <p className="text-sm leading-relaxed">
+                Supported by strong regional presence and operational partnerships.
+              </p>
+            </div>
+            <div className="bg-white text-background p-10 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">Scalable Execution</h3>
+              <p className="text-sm leading-relaxed">
+                Focused on growth through structured, execution-driven business models.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach Section */}
+      <section className="py-24 md:py-32 bg-card px-6">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-foreground text-center">
+            Our Approach
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Execution-driven</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Focused on efficient operations and timely delivery
+              </p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Scalable operations</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Built to expand across sectors and markets
+              </p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Long-term partnerships</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Strong emphasis on reliability and continuity
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Businesses Section */}
       <section className="py-24 md:py-32 bg-background px-6">
         <div className="container mx-auto max-w-7xl">
