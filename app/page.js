@@ -120,7 +120,7 @@ function HeroSlider() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 4500)
+    }, 4000)
     return () => clearInterval(timer)
   }, [slides.length])
 

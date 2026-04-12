@@ -5,10 +5,10 @@ import { useState, useEffect } from 'react'
 export default function FlagshipPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const slides = [
-    { id: 1, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/a6m7ikni_DJI_0466.JPG' },
-    { id: 2, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/zm39y1iz_DJI_0477.JPG' },
-    { id: 3, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/e9dedkou_DJI_0500.JPG' },
-    { id: 4, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/7s0gqyvt_DJI_0508.jpg' },
+    { id: 1, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/qn93mjnu_DSC07259.JPG' },
+    { id: 2, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/zpie463e_DJI_0508.JPG' },
+    { id: 3, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/1kjlmge9_DJI_0500.JPG' },
+    { id: 4, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/q7xffo8q_DJI_0477.JPG' },
   ]
 
   useEffect(() => {
@@ -52,8 +52,28 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Stats Section - 3 White Cards (FIXED) */}
+      {/* Overview Section - MOVED UP */}
       <section className="py-24 md:py-28 bg-white px-6">
+        <div className="container mx-auto max-w-3xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
+            Overview
+          </h2>
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Jericho Foods and Beverages LLP is the flagship manufacturing arm of the group, operating in collaboration with Reliance Consumer Products Ltd. (RCPL).
+            </p>
+            <p>
+              The facility is designed for large-scale beverage production with a focus on operational efficiency, consistency, and supply reliability.
+            </p>
+            <p>
+              The plant is structured to support large-scale production through multiple specialized bottling lines, ensuring consistent output across product categories.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section - 3 White Cards */}
+      <section className="py-24 md:py-28 bg-secondary/30 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="bg-white border border-gray-200 rounded-xl p-12 text-center shadow-lg">
@@ -84,42 +104,42 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Overview Section */}
-      <section className="py-24 md:py-28 bg-secondary/30 px-6">
+      {/* Operational Strength Section - NEW */}
+      <section className="py-24 md:py-28 bg-white px-6">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-foreground">
-            Overview
+          <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground">
+            Operational Strength
           </h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Jericho Foods and Beverages LLP is the flagship manufacturing arm of the group, operating in collaboration with Reliance Consumer Products Ltd. (RCPL). The facility is designed for large-scale beverage production with a focus on operational efficiency, consistency, and supply reliability.
+              Built on substantial land infrastructure and capital investment, the plant is equipped to handle high-volume operations with streamlined processes across production, storage, and dispatch.
             </p>
             <p>
-              The plant is structured to support large-scale production through multiple specialized bottling lines, ensuring consistent output across product categories.
+              The facility operates exclusively for RCPL products, ensuring focused execution and alignment with brand standards while maintaining operational excellence across all production lines.
             </p>
           </div>
         </div>
       </section>
 
       {/* Manufacturing Excellence Section */}
-      <section className="py-24 md:py-28 bg-white px-6">
+      <section className="py-24 md:py-28 bg-secondary/30 px-6">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground">
             Manufacturing Excellence
           </h2>
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              Jericho Foods and Beverages LLP operates as a dedicated beverage manufacturing facility in collaboration with RCPL. Built on substantial land infrastructure and capital investment, the plant is equipped to handle high-volume operations with streamlined processes across production, storage, and dispatch.
+              The facility is engineered for precision manufacturing with state-of-the-art production infrastructure designed to meet stringent quality standards and production efficiency requirements.
             </p>
             <p>
-              The facility operates exclusively for RCPL products, ensuring focused execution and alignment with brand standards.
+              Advanced automation systems and quality control protocols ensure consistent product output while maintaining operational reliability across all manufacturing processes.
             </p>
           </div>
         </div>
       </section>
 
       {/* Product Capabilities Section */}
-      <section className="py-24 md:py-28 bg-secondary/30 px-6">
+      <section className="py-24 md:py-28 bg-white px-6">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground">
             Product Capabilities
@@ -136,7 +156,7 @@ export default function FlagshipPage() {
       </section>
 
       {/* Distribution & Reach Section */}
-      <section className="py-24 md:py-28 bg-white px-6">
+      <section className="py-24 md:py-28 bg-secondary/30 px-6">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-4xl md:text-5xl font-bold mb-10 text-foreground">
             Distribution & Reach

@@ -73,11 +73,136 @@ export default function BusinessesPage() {
         </div>
       </section>
 
-      {/* Businesses Grid */}
+      {/* Businesses Grid - FORCED ROW LAYOUT: 2-3-2 */}
       <section className="pb-24 px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {businesses.map((business) => (
+          {/* Row 1: First 2 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            {businesses.slice(0, 2).map((business) => (
+              <div
+                key={business.id}
+                className={`transition-all duration-500 ${
+                  expandedId === business.id
+                    ? 'fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/80'
+                    : expandedId !== null
+                    ? 'opacity-20 pointer-events-none'
+                    : ''
+                }`}
+              >
+                {expandedId === business.id ? (
+                  /* Expanded Card */
+                  <div className="bg-card rounded-lg p-10 max-w-3xl max-h-[90vh] overflow-y-auto relative shadow-2xl">
+                    <button
+                      onClick={() => toggleExpand(business.id)}
+                      className="absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors"
+                      aria-label="Close"
+                    >
+                      <X size={24} />
+                    </button>
+                    <h2 className="text-3xl font-bold text-foreground mb-2 pr-12">
+                      {business.name}
+                    </h2>
+                    <p className="text-sm text-primary font-medium mb-6">
+                      {business.industry}
+                    </p>
+                    <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                      {business.description}
+                    </p>
+                    <div className="bg-secondary aspect-video flex items-center justify-center border border-border/20">
+                      <span className="text-muted-foreground text-sm">{business.name}</span>
+                    </div>
+                  </div>
+                ) : (
+                  /* Normal Card */
+                  <div className="bg-secondary rounded-lg p-8 min-h-[240px] flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1">
+                    <div>
+                      <h3 className="text-xl font-bold text-foreground mb-2">
+                        {business.name}
+                      </h3>
+                      <p className="text-sm text-primary font-medium mb-4">
+                        {business.industry}
+                      </p>
+                      <p className="text-muted-foreground mb-6 line-clamp-2">
+                        {business.overview}
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => toggleExpand(business.id)}
+                      className="text-primary hover:text-primary/80 font-medium underline underline-offset-4 transition-colors text-left"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Row 2: Next 3 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {businesses.slice(2, 5).map((business) => (
+              <div
+                key={business.id}
+                className={`transition-all duration-500 ${
+                  expandedId === business.id
+                    ? 'fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/80'
+                    : expandedId !== null
+                    ? 'opacity-20 pointer-events-none'
+                    : ''
+                }`}
+              >
+                {expandedId === business.id ? (
+                  /* Expanded Card */
+                  <div className="bg-card rounded-lg p-10 max-w-3xl max-h-[90vh] overflow-y-auto relative shadow-2xl">
+                    <button
+                      onClick={() => toggleExpand(business.id)}
+                      className="absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors"
+                      aria-label="Close"
+                    >
+                      <X size={24} />
+                    </button>
+                    <h2 className="text-3xl font-bold text-foreground mb-2 pr-12">
+                      {business.name}
+                    </h2>
+                    <p className="text-sm text-primary font-medium mb-6">
+                      {business.industry}
+                    </p>
+                    <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                      {business.description}
+                    </p>
+                    <div className="bg-secondary aspect-video flex items-center justify-center border border-border/20">
+                      <span className="text-muted-foreground text-sm">{business.name}</span>
+                    </div>
+                  </div>
+                ) : (
+                  /* Normal Card */
+                  <div className="bg-secondary rounded-lg p-8 min-h-[240px] flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1">
+                    <div>
+                      <h3 className="text-xl font-bold text-foreground mb-2">
+                        {business.name}
+                      </h3>
+                      <p className="text-sm text-primary font-medium mb-4">
+                        {business.industry}
+                      </p>
+                      <p className="text-muted-foreground mb-6 line-clamp-2">
+                        {business.overview}
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => toggleExpand(business.id)}
+                      className="text-primary hover:text-primary/80 font-medium underline underline-offset-4 transition-colors text-left"
+                    >
+                      Learn More
+                    </button>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Row 3: Last 2 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {businesses.slice(5, 7).map((business) => (
               <div
                 key={business.id}
                 className={`transition-all duration-500 ${

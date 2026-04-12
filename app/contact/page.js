@@ -61,58 +61,52 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Head Office Section - CENTERED & REDESIGNED */}
+      {/* Head Office Section - 2x2 GRID REDESIGN */}
       <section className="pb-20 px-6 bg-white">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-foreground mb-10 text-center">
             Head Office
           </h2>
-          <div className="bg-white border border-gray-200 rounded-xl p-14 shadow-lg">
-            <h3 className="text-2xl font-bold text-foreground mb-12 text-center">
-              Jericho Group Head Office
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-10">
-              {/* Left Column */}
-              <div className="space-y-10">
-                <div>
-                  <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wide font-semibold">
-                    LOCATION
-                  </p>
-                  <p className="text-base text-foreground leading-relaxed">
-                    Near House No. 43A, Momo Ghar Lane,<br />
-                    GNB Road, Ambari, Guwahati, 781001
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wide font-semibold">
-                    CONTACT PERSON
-                  </p>
-                  <p className="text-base text-foreground">
-                    Mr. Ajay Verma
-                  </p>
-                </div>
+          <div className="bg-white border border-gray-200 rounded-xl p-16 shadow-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16">
+              {/* Top Left - Title */}
+              <div>
+                <h3 className="text-2xl font-bold text-foreground">
+                  Jericho Group<br />Head Office
+                </h3>
               </div>
 
-              {/* Right Column */}
-              <div className="space-y-10">
-                <div>
-                  <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wide font-semibold">
-                    PHONE NUMBER
-                  </p>
-                  <p className="text-base text-foreground">
-                    +91 9085903455
-                  </p>
-                </div>
-                
-                <div>
-                  <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wide font-semibold">
-                    EMAIL ID
-                  </p>
-                  <p className="text-base text-foreground">
-                    ajay.verma@jericho.co.in
-                  </p>
-                </div>
+              {/* Top Right - Phone */}
+              <div>
+                <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wide font-semibold">
+                  PHONE NUMBER
+                </p>
+                <p className="text-lg text-foreground font-medium">
+                  +91 9085903455
+                </p>
+              </div>
+
+              {/* Bottom Left - Email */}
+              <div>
+                <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wide font-semibold">
+                  EMAIL ID
+                </p>
+                <p className="text-lg text-foreground font-medium">
+                  ajay.verma@jericho.co.in
+                </p>
+              </div>
+
+              {/* Bottom Right - Address */}
+              <div>
+                <p className="text-sm text-muted-foreground mb-3 uppercase tracking-wide font-semibold">
+                  ADDRESS
+                </p>
+                <p className="text-base text-foreground leading-relaxed">
+                  Near House No. 43A,<br />
+                  Momo Ghar Lane,<br />
+                  GNB Road, Ambari,<br />
+                  Guwahati, 781001
+                </p>
               </div>
             </div>
           </div>
