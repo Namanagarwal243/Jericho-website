@@ -122,7 +122,7 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Key Capabilities - 3 Horizontal Blocks - UNIFORM SPACING */}
+      {/* Key Capabilities - 3 Horizontal Blocks - EXACT SAME SIZING */}
       <section className="py-20 bg-white px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

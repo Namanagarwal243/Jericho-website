@@ -80,7 +80,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Businesses Section - WHITE BACKGROUND WITH WHITE CARDS */}
+      {/* Our Businesses Section - WHITE BACKGROUND WITH WHITE CARDS - FIXED ALIGNMENT */}
       <section className="py-32 md:py-40 bg-white px-6">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-5xl md:text-6xl font-bold mb-20 text-foreground text-center">
@@ -91,9 +91,9 @@ export default function Home() {
               <Link
                 key={index}
                 href={business.href}
-                className="group bg-white rounded-xl p-10 flex flex-col items-center justify-center text-center min-h-[220px] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer border border-border shadow-md"
+                className="group bg-white rounded-xl p-10 flex flex-col items-center justify-center text-center h-[240px] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer border border-border shadow-md"
               >
-                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-lg font-bold text-foreground mb-4 group-hover:text-primary transition-colors leading-tight">
                   {business.name}
                 </h3>
                 <p className="text-sm text-muted-foreground">
