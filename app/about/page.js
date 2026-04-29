@@ -44,11 +44,12 @@ export default function AboutPage() {
             {/* Ashis Agarwal */}
             <div className="bg-card rounded-lg p-10">
               {/* Photo */}
-              <div className="w-full aspect-square rounded-lg mb-8 overflow-hidden">
+              <div className="w-full aspect-square rounded-lg mb-8 overflow-hidden bg-gradient-to-b from-secondary/10 to-secondary/30">
                 <img 
                   src="https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/nbkzpf97_Ashis_Agarwal_photo.jpeg" 
                   alt="Ashis Agarwal"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 20%' }}
                 />
               </div>
               
@@ -67,11 +68,11 @@ export default function AboutPage() {
             {/* Beejeet Prakash */}
             <div className="bg-card rounded-lg p-10">
               {/* Photo */}
-              <div className="w-full aspect-square rounded-lg mb-8 overflow-hidden">
+              <div className="w-full aspect-square rounded-lg mb-8 overflow-hidden bg-gradient-to-b from-secondary/10 to-secondary/30">
                 <img 
-                  src="https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/zj0wqz9u_Beejeet%20Prakash%20photo.jpeg" 
+                  src="https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/8s6jmni4_Beejeet_Prakash_photo-removebg-preview-2.png" 
                   alt="Beejeet Prakash"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               
