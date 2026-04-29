@@ -41,25 +41,51 @@ export default function AboutPage() {
             Leadership
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {leadership.map((person, index) => (
-              <div key={index} className="bg-card rounded-lg p-10">
-                {/* Image Placeholder */}
-                <div className="w-full aspect-square bg-secondary/30 rounded-lg mb-8 flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Leadership Photo</span>
-                </div>
-                
-                {/* Details */}
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-                  {person.name}
-                </h3>
-                <p className="text-primary font-semibold mb-6">
-                  {person.title}
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  {person.bio}
-                </p>
+            {/* Ashis Agarwal */}
+            <div className="bg-card rounded-lg p-10">
+              {/* Photo */}
+              <div className="w-full aspect-square rounded-lg mb-8 overflow-hidden">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/hy0fgmmy_Ashis%20Agarwal%20photo.jpeg" 
+                  alt="Ashis Agarwal"
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
+              
+              {/* Details */}
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                Ashis Agarwal
+              </h3>
+              <p className="text-primary font-semibold mb-6">
+                Promoter and Director
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Ashis Agarwal serves as Promoter and Director of Jericho Group, providing strategic direction and leadership across the organization. With extensive business experience, he guides the group's diversified operations and long-term growth initiatives while maintaining focus on operational excellence and market development.
+              </p>
+            </div>
+
+            {/* Beejeet Prakash */}
+            <div className="bg-card rounded-lg p-10">
+              {/* Photo */}
+              <div className="w-full aspect-square rounded-lg mb-8 overflow-hidden">
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/zj0wqz9u_Beejeet%20Prakash%20photo.jpeg" 
+                  alt="Beejeet Prakash"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Details */}
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                Beejeet Prakash
+              </h3>
+              <p className="text-primary font-semibold mb-6">
+                Managing Director
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Beejeet Prakash serves as Managing Director, responsible for overall management and operational execution across business units. He ensures alignment with strategic objectives while driving performance improvements and maintaining strong stakeholder relationships across the organization.
+              </p>
+            </div>
           </div>
         </div>
       </section>
