@@ -46,9 +46,9 @@ export default function AboutPage() {
               {/* Photo */}
               <div className="w-full aspect-square rounded-lg mb-8 overflow-hidden">
                 <img 
-                  src="https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/hy0fgmmy_Ashis%20Agarwal%20photo.jpeg" 
+                  src="https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/nbkzpf97_Ashis_Agarwal_photo.jpeg" 
                   alt="Ashis Agarwal"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               
