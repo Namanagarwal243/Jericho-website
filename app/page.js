@@ -20,10 +20,10 @@ export default function Home() {
       {/* Hero Section - Full Width Image Slider */}
       <HeroSlider />
 
-      {/* Company Overview Section - WHITE BACKGROUND */}
+      {/* Company Overview Section - WHITE BACKGROUND - CENTERED HEADING */}
       <section className="py-32 md:py-40 bg-white px-6">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-5xl md:text-6xl font-bold mb-16 text-foreground">
+          <h2 className="text-5xl md:text-6xl font-bold mb-16 text-foreground text-center">
             Company Overview
           </h2>
           <div className="space-y-10">

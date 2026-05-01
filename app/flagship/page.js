@@ -113,11 +113,11 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Highlight Strip - Enhanced Contrast */}
+      {/* Highlight Strip - Enhanced Contrast - SINGLE LINE */}
       <section className="py-16 bg-primary border-y border-primary">
-        <div className="container mx-auto max-w-4xl text-center px-6">
-          <p className="text-2xl md:text-3xl font-bold text-white leading-relaxed">
-            Built for scale. Designed for consistency. Trusted by RCPL.
+        <div className="container mx-auto max-w-6xl text-center px-6">
+          <p className="text-xl md:text-2xl font-bold text-white whitespace-nowrap">
+            Built for scale  •  Designed for consistency  •  Trusted by RCPL
           </p>
         </div>
       </section>
