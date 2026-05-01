@@ -115,6 +115,8 @@ function HeroSlider() {
     { id: 2, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/zm39y1iz_DJI_0477.JPG' },
     { id: 3, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/e9dedkou_DJI_0500.JPG' },
     { id: 4, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/7s0gqyvt_DJI_0508.jpg' },
+    { id: 5, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/hw5myhd9_DSC07259.JPG' },
+    { id: 6, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/2o1tiy4o_DSC07325.JPG' },
   ]
 
   useEffect(() => {

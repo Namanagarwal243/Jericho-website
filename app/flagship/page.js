@@ -113,40 +113,40 @@ export default function FlagshipPage() {
         </div>
       </section>
 
-      {/* Highlight Strip - Increased Padding */}
-      <section className="py-12 bg-primary/5 border-y border-primary/10">
-        <div className="container mx-auto max-w-4xl text-center">
-          <p className="text-lg md:text-xl font-semibold text-foreground">
+      {/* Highlight Strip - Enhanced Contrast */}
+      <section className="py-16 bg-primary border-y border-primary">
+        <div className="container mx-auto max-w-4xl text-center px-6">
+          <p className="text-2xl md:text-3xl font-bold text-white leading-relaxed">
             Built for scale. Designed for consistency. Trusted by RCPL.
           </p>
         </div>
       </section>
 
-      {/* Key Capabilities - 3 Horizontal Blocks - EXACT SAME SIZING */}
+      {/* Key Capabilities - 3 Horizontal Blocks - INCREASED FONT SIZE */}
       <section className="py-20 bg-white px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <h3 className="text-lg font-bold text-foreground mb-3">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
                 Bottling Infrastructure
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Multiple specialized bottling lines for CSD, PDW, and juice production
               </p>
             </div>
             <div className="text-center">
-              <h3 className="text-lg font-bold text-foreground mb-3">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
                 Product Capabilities
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Manufacturing across Campa, Independence, and Raskik brands
               </p>
             </div>
             <div className="text-center">
-              <h3 className="text-lg font-bold text-foreground mb-3">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
                 Distribution Network
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Strategic APOB for Assam and adjoining regional markets
               </p>
             </div>
