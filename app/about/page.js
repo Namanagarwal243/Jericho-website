@@ -23,17 +23,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Company Note - Clean and Structured */}
-      <section className="pb-16 px-6">
-        <div className="container mx-auto max-w-4xl">
-          <div className="bg-white border border-gray-200 rounded-xl p-12 shadow-md">
-            <p className="text-lg text-muted-foreground leading-relaxed text-center">
-              Jericho Group operates across manufacturing, distribution, hospitality, and consulting sectors with a focus on operational excellence and strategic partnerships. Led by experienced leadership, the organization maintains a diversified portfolio while driving sustainable growth and regional market presence.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Leadership Section */}
       <section className="pb-24 px-6">
         <div className="container mx-auto max-w-5xl">

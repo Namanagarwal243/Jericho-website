@@ -31,7 +31,7 @@ export default function Home() {
               Jericho Group — A Diversified Business Collective
             </p>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Jericho Group operates across manufacturing, distribution, hospitality, retail, and consulting, built on strong operational foundations and long-term partnerships. The group focuses on scalable, execution-driven growth while adapting to evolving market dynamics across sectors.
+              Jericho Group, with over 30 years of industry experience, is one of the most prominent business collectives in North-East India, operating across manufacturing, distribution, hospitality, retail, and consulting. Built on strong operational foundations and long-term partnerships, the group is driven by scalable, execution-led growth while continuously adapting to evolving market dynamics across sectors.
             </p>
             <ul className="space-y-6 text-lg text-muted-foreground mt-12">
               <li className="flex items-start">
@@ -80,6 +80,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Businesses Section - WHITE BACKGROUND WITH WHITE CARDS - FIXED ALIGNMENT */}
+      <section className="py-32 md:py-40 bg-white px-6">
+        <div className="container mx-auto max-w-7xl">
+          <h2 className="text-5xl md:text-6xl font-bold mb-20 text-foreground text-center">
+            Our Businesses
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {businesses.map((business, index) => (
+              <Link
+                key={index}
+                href={business.href}
+                className="group bg-white rounded-xl p-10 flex flex-col items-center justify-center text-center h-[240px] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer border border-border shadow-md"
+              >
+                <h3 className="text-lg font-bold text-foreground mb-4 group-hover:text-primary transition-colors leading-tight">
+                  {business.name}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {business.industry}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Work With Us Section - CLEAN ACTION-ORIENTED */}
       <section className="py-32 md:py-40 bg-secondary/30 px-6">
         <div className="container mx-auto max-w-5xl">
@@ -118,31 +143,6 @@ export default function Home() {
                 Start a Conversation
               </span>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Businesses Section - WHITE BACKGROUND WITH WHITE CARDS - FIXED ALIGNMENT */}
-      <section className="py-32 md:py-40 bg-white px-6">
-        <div className="container mx-auto max-w-7xl">
-          <h2 className="text-5xl md:text-6xl font-bold mb-20 text-foreground text-center">
-            Our Businesses
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {businesses.map((business, index) => (
-              <Link
-                key={index}
-                href={business.href}
-                className="group bg-white rounded-xl p-10 flex flex-col items-center justify-center text-center h-[240px] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer border border-border shadow-md"
-              >
-                <h3 className="text-lg font-bold text-foreground mb-4 group-hover:text-primary transition-colors leading-tight">
-                  {business.name}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {business.industry}
-                </p>
-              </Link>
-            ))}
           </div>
         </div>
       </section>
