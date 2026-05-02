@@ -80,6 +80,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Work With Us Section - CLEAN ACTION-ORIENTED */}
+      <section className="py-32 md:py-40 bg-secondary/30 px-6">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-5xl md:text-6xl font-bold mb-20 text-foreground text-center">
+            Work With Us
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Careers at Jericho Card */}
+            <Link
+              href="/contact"
+              className="group bg-white rounded-xl p-10 flex flex-col items-center justify-center text-center h-[280px] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer border border-border shadow-md"
+            >
+              <h3 className="text-2xl font-bold text-foreground mb-6 group-hover:text-primary transition-colors">
+                Careers at Jericho
+              </h3>
+              <p className="text-base text-muted-foreground mb-8 leading-relaxed">
+                Build your career with a group driven by execution and scale.
+              </p>
+              <span className="text-primary font-semibold underline underline-offset-4 group-hover:text-primary/80 transition-colors">
+                View Opportunities
+              </span>
+            </Link>
+
+            {/* Partner With Us Card */}
+            <Link
+              href="/contact"
+              className="group bg-white rounded-xl p-10 flex flex-col items-center justify-center text-center h-[280px] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer border border-border shadow-md"
+            >
+              <h3 className="text-2xl font-bold text-foreground mb-6 group-hover:text-primary transition-colors">
+                Partner With Us
+              </h3>
+              <p className="text-base text-muted-foreground mb-8 leading-relaxed">
+                Collaborate, distribute, or expand with Jericho across sectors.
+              </p>
+              <span className="text-primary font-semibold underline underline-offset-4 group-hover:text-primary/80 transition-colors">
+                Start a Conversation
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Our Businesses Section - WHITE BACKGROUND WITH WHITE CARDS - FIXED ALIGNMENT */}
       <section className="py-32 md:py-40 bg-white px-6">
         <div className="container mx-auto max-w-7xl">
