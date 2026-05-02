@@ -73,7 +73,10 @@ export default function BusinessesPage() {
       industry: 'Wine Retail',
       overview: 'Established retail liquor outlet operating since 1998, built on long-standing market presence and customer relationships.',
       description: 'Established in 1998, Jericho Wines has built a long-standing presence in the retail liquor sector. The outlet operates with a focus on product selection and customer service, serving a consistent client base over more than two decades. The business maintains reliable supply relationships and operates within regulatory compliance standards. Jericho Wines has developed regional recognition through sustained operations and market positioning.',
-      images: [], // No images provided
+      images: [
+        'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/lqksbzz3_Jericho%20Wines%201.jpeg',
+        'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/fz5g8ffo_Jericho%20Wines%202.jpeg',
+      ],
     },
     {
       id: 5,
