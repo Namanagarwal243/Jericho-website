@@ -159,6 +159,7 @@ function HeroSlider() {
     { id: 4, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/7s0gqyvt_DJI_0508.jpg' },
     { id: 5, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/hw5myhd9_DSC07259.JPG' },
     { id: 6, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/2o1tiy4o_DSC07325.JPG' },
+    { id: 7, url: 'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/z221dfm3_Jerichem%201.png' },
   ]
 
   useEffect(() => {

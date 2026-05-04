@@ -46,7 +46,10 @@ export default function BusinessesPage() {
       industry: 'Detergent Manufacturing',
       overview: 'Home care manufacturing company operating across North East India, marketing products under the Quick and Jaya brands through a structured regional distribution network.',
       description: 'Jerichem Pvt Ltd operates as a dedicated manufacturer of home care products with a focus on regional market presence. The company markets its products under the Quick and Jaya brands through an established distribution network across North East India. Operations are structured to maintain consistent product quality and supply reliability to support market requirements in the region. The company maintains manufacturing capabilities designed for scalable production while meeting local demand patterns.',
-      images: [], // No images provided
+      images: [
+        'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/z221dfm3_Jerichem%201.png',
+        'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/h3bvg2i7_Jerichem%202.JPG',
+      ],
     },
     {
       id: 2,
@@ -95,7 +98,10 @@ export default function BusinessesPage() {
       industry: 'Hospitality',
       overview: 'Operates Dhaba Estd 1986 and Mamagoto restaurant brands in collaboration with brand owners.',
       description: 'Amaze Hospitality operates both Dhaba Estd 1986 and Mamagoto restaurant brands in collaboration with respective brand owners. The business manages multi-brand restaurant operations with focus on maintaining service standards and operational efficiency. Operations are conducted under partnership or franchise arrangements covering restaurant management, service delivery, and brand compliance. The company handles operational aspects including staff management, supply coordination, and customer service across both brands.',
-      images: [], // No images provided
+      images: [
+        'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/h7o8v05d_Amaze%20Hospitality%201.jpeg',
+        'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/bvu5wtmj_Amaze%20Hospitality%202.jpg',
+      ],
     },
     {
       id: 7,
