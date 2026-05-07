@@ -20,30 +20,30 @@ export default function Home() {
       {/* Hero Section - Full Width Image Slider */}
       <HeroSlider />
 
-      {/* Company Overview Section - WHITE BACKGROUND - CENTERED HEADING */}
-      <section className="py-32 md:py-40 bg-white px-6">
+      {/* Company Overview Section - MOBILE OPTIMIZED */}
+      <section className="py-16 sm:py-24 md:py-32 lg:py-40 bg-white px-4 sm:px-6">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-5xl md:text-6xl font-bold mb-16 text-foreground text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 sm:mb-12 lg:mb-16 text-foreground text-center">
             Company Overview
           </h2>
-          <div className="space-y-10">
-            <p className="text-3xl md:text-4xl font-semibold text-foreground leading-snug">
+          <div className="space-y-6 sm:space-y-8 lg:space-y-10">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-foreground leading-snug">
               Jericho Group — A Diversified Business Collective
             </p>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground leading-relaxed">
               Jericho Group, with over 30 years of industry experience, is one of the most prominent business collectives in North-East India, operating across manufacturing, distribution, hospitality, retail, and consulting. Built on strong operational foundations and long-term partnerships, the group is driven by scalable, execution-led growth while continuously adapting to evolving market dynamics across sectors.
             </p>
-            <ul className="space-y-6 text-lg text-muted-foreground mt-12">
+            <ul className="space-y-4 sm:space-y-5 lg:space-y-6 text-sm sm:text-base lg:text-lg text-muted-foreground mt-8 sm:mt-10 lg:mt-12">
               <li className="flex items-start">
-                <span className="text-primary mr-4 mt-1 text-2xl">•</span>
+                <span className="text-primary mr-3 sm:mr-4 mt-1 text-lg sm:text-xl lg:text-2xl">•</span>
                 <span className="leading-relaxed">Multi-sector presence with strong regional expertise</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-4 mt-1 text-2xl">•</span>
+                <span className="text-primary mr-3 sm:mr-4 mt-1 text-lg sm:text-xl lg:text-2xl">•</span>
                 <span className="leading-relaxed">Execution-led approach with scalable operations</span>
               </li>
               <li className="flex items-start">
-                <span className="text-primary mr-4 mt-1 text-2xl">•</span>
+                <span className="text-primary mr-3 sm:mr-4 mt-1 text-lg sm:text-xl lg:text-2xl">•</span>
                 <span className="leading-relaxed">Backed by strategic partnerships and long-term vision</span>
               </li>
             </ul>
@@ -51,28 +51,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Approach Section - LIGHT BACKGROUND */}
-      <section className="py-32 md:py-40 bg-secondary/50 px-6">
+      {/* Our Approach Section - MOBILE OPTIMIZED */}
+      <section className="py-16 sm:py-24 md:py-32 lg:py-40 bg-secondary/50 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-5xl md:text-6xl font-bold mb-20 text-foreground text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-10 sm:mb-16 lg:mb-20 text-foreground text-center">
             Our Approach
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-            <div className="text-center space-y-6">
-              <h3 className="text-3xl font-bold text-foreground">Execution-driven</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
+            <div className="text-center space-y-3 sm:space-y-4 md:space-y-6">
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground">Execution-driven</h3>
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
                 Focused on efficient operations and timely delivery
               </p>
             </div>
-            <div className="text-center space-y-6">
-              <h3 className="text-3xl font-bold text-foreground">Scalable operations</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+            <div className="text-center space-y-3 sm:space-y-4 md:space-y-6">
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground">Scalable operations</h3>
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
                 Built to expand across sectors and markets
               </p>
             </div>
-            <div className="text-center space-y-6">
-              <h3 className="text-3xl font-bold text-foreground whitespace-nowrap">Long-term partnerships</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+            <div className="text-center space-y-3 sm:space-y-4 md:space-y-6">
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground">Long-term partnerships</h3>
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
                 Strong emphasis on reliability and continuity
               </p>
             </div>
