@@ -9,7 +9,7 @@ export default function Home() {
     { name: 'Jerichem Pvt Ltd', industry: 'Detergent Manufacturing', href: '/businesses' },
     { name: 'Jericho Chemicals LLP', industry: 'Warehousing', href: '/businesses' },
     { name: 'Jericho Distributor', industry: 'Logistics and Distribution', href: '/businesses' },
-    { name: 'Azure Hospitality', industry: 'Hospitality', href: '/businesses' },
+    { name: 'Allure Hospitality', industry: 'Hospitality', href: '/businesses' },
     { name: 'Amaze Hospitality', industry: 'Hospitality', href: '/businesses' },
     { name: 'SR Associates', industry: 'Consulting', href: '/businesses' },
     { name: 'Jericho Wines', industry: 'Wine Retail', href: '/businesses' },
@@ -80,10 +80,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Businesses Section - WHITE BACKGROUND WITH WHITE CARDS - FIXED ALIGNMENT */}
-      <section className="py-32 md:py-40 bg-white px-6">
+      {/* Our Businesses Section - MOBILE RESPONSIVE */}
+      <section className="py-20 sm:py-28 md:py-32 lg:py-40 bg-white px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <h2 className="text-5xl md:text-6xl font-bold mb-20 text-foreground text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-12 sm:mb-16 md:mb-20 text-foreground text-center">
             Our Businesses
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -105,10 +105,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Work With Us Section - CLEAN ACTION-ORIENTED */}
-      <section className="py-32 md:py-40 bg-secondary/30 px-6">
+      {/* Work With Us Section - MOBILE RESPONSIVE */}
+      <section className="py-20 sm:py-28 md:py-32 lg:py-40 bg-secondary/30 px-4 sm:px-6">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-5xl md:text-6xl font-bold mb-20 text-foreground text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-12 sm:mb-16 md:mb-20 text-foreground text-center">
             Work With Us
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -189,13 +189,13 @@ function HeroSlider() {
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/50 z-10"></div>
       
-      {/* Centered Text */}
-      <div className="relative z-20 h-full flex items-center justify-center px-6">
-        <div className="text-center">
-          <p className="text-lg md:text-xl text-white/80 mb-4 tracking-wide">
+      {/* Centered Text - MOBILE RESPONSIVE */}
+      <div className="relative z-20 h-full flex items-center justify-center px-4 sm:px-6">
+        <div className="text-center max-w-4xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 mb-3 sm:mb-4 tracking-wide">
             Jericho Group
           </p>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tight leading-tight">
             A diversified business collective
           </h1>
         </div>

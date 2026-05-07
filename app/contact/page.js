@@ -61,20 +61,20 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Head Office Section - 2x2 GRID */}
-      <section className="pb-20 px-6 bg-white">
+      {/* Head Office Section - 2x2 GRID - MOBILE RESPONSIVE */}
+      <section className="pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 bg-white">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-10 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6 sm:mb-8 md:mb-10 text-center">
             Head Office
           </h2>
-          <div className="bg-white border border-gray-200 rounded-xl p-16 shadow-lg">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
+          <div className="bg-white border border-gray-200 rounded-xl p-6 sm:p-10 md:p-12 lg:p-16 shadow-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-x-20 md:gap-y-12">
               {/* Top Left - Contact Person */}
               <div>
                 <p className="text-xs text-primary mb-3 uppercase tracking-wide font-semibold">
                   CONTACT PERSON
                 </p>
-                <p className="text-lg text-foreground font-medium">
+                <p className="text-base sm:text-lg text-foreground font-medium">
                   Mr. Ajay Verma
                 </p>
               </div>
@@ -84,7 +84,7 @@ export default function ContactPage() {
                 <p className="text-xs text-primary mb-3 uppercase tracking-wide font-semibold">
                   PHONE NUMBER
                 </p>
-                <p className="text-lg text-foreground font-medium">
+                <p className="text-base sm:text-lg text-foreground font-medium">
                   +91 9085903455
                 </p>
               </div>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                 <p className="text-xs text-primary mb-3 uppercase tracking-wide font-semibold">
                   EMAIL ID
                 </p>
-                <p className="text-lg text-foreground font-medium">
+                <p className="text-base sm:text-lg text-foreground font-medium break-all">
                   ajay.verma@jericho.co.in
                 </p>
               </div>
@@ -104,7 +104,7 @@ export default function ContactPage() {
                 <p className="text-xs text-primary mb-3 uppercase tracking-wide font-semibold">
                   ADDRESS
                 </p>
-                <p className="text-base text-foreground leading-relaxed">
+                <p className="text-sm sm:text-base text-foreground leading-relaxed">
                   Near House No. 43A,<br />
                   Momo Ghar Lane,<br />
                   GNB Road, Ambari,<br />
