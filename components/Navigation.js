@@ -27,8 +27,8 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 bg-white border-b border-gray-200">
-      <div className="container mx-auto px-8 lg:px-16">
-        <div className="flex items-center justify-between h-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-16">
+        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
@@ -36,7 +36,7 @@ export default function Navigation() {
               alt="Jericho"
               width={180}
               height={60}
-              className="h-12 w-auto"
+              className="h-8 sm:h-10 lg:h-12 w-auto"
               priority
             />
           </Link>
@@ -61,24 +61,24 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-gray-900 hover:text-primary transition-colors"
+            className="lg:hidden text-gray-900 hover:text-primary transition-colors p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-gray-200 bg-white">
-          <div className="container mx-auto px-6 py-6 space-y-4">
+        <div className="lg:hidden border-t border-gray-200 bg-white shadow-lg">
+          <div className="container mx-auto px-4 sm:px-6 py-6 space-y-4">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`block text-base font-medium transition-colors ${
+                className={`block text-base font-medium py-2 transition-colors ${
                   isActive(item.href) ? 'text-primary' : 'text-gray-700 hover:text-primary'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
