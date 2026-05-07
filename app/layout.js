@@ -4,6 +4,7 @@ import './globals.css'
 import { useState, useEffect } from 'react'
 import Navigation from '@/components/Navigation'
 import SplashScreen from '@/components/SplashScreen'
+import { Analytics } from '@vercel/analytics/next'
 
 export default function RootLayout({ children }) {
   const [showSplash, setShowSplash] = useState(true)
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
             </main>
           </>
         )}
+        <Analytics />
       </body>
     </html>
   )
