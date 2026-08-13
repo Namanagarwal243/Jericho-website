@@ -116,11 +116,11 @@ export default function ContactPage() {
           <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
             Business Units
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {contacts.map((contact, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-xl p-8 shadow-md transition-all duration-300 hover:shadow-lg flex flex-col"
+                className={`${index === 0 ? 'md:col-span-2' : 'md:col-span-1'} bg-white border border-gray-200 rounded-xl p-8 shadow-md transition-all duration-300 hover:shadow-lg flex flex-col`}
               >
                 <h3 className="text-lg font-bold text-foreground mb-6 min-h-[3.5rem] flex items-start">
                   {contact.name}

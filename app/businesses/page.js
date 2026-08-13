@@ -109,141 +109,82 @@ export default function BusinessesPage() {
         </div>
       </section>
 
-      {/* Businesses Grid - BALANCED 3-2 LAYOUT FOR 5 BUSINESSES */}
+      {/* Businesses Grid - Jericho Chemicals LLP spans 2, rest in 2x2 on desktop */}
       <section className="pb-24 px-6">
         <div className="container mx-auto max-w-6xl">
-          {/* Row 1: First 3 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            {businesses.slice(0, 3).map((business) => (
-              <div
-                key={business.id}
-                className={`transition-all duration-500 ${
-                  expandedId === business.id
-                    ? 'fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/80'
-                    : expandedId !== null
-                    ? 'opacity-20 pointer-events-none'
-                    : ''
-                }`}
-              >
-                {expandedId === business.id ? (
-                  /* Expanded Card */
-                  <div className="bg-card rounded-lg p-10 max-w-3xl max-h-[90vh] overflow-y-auto relative shadow-2xl">
-                    <button
-                      onClick={() => toggleExpand(business.id)}
-                      className="absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors"
-                      aria-label="Close"
-                    >
-                      <X size={24} />
-                    </button>
-                    <h2 className="text-3xl font-bold text-foreground mb-2 pr-12">
-                      {business.name}
-                    </h2>
-                    <p className="text-sm text-primary font-medium mb-6">
-                      {business.industry}
-                    </p>
-                    <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                      {business.description}
-                    </p>
-                    {/* Image Display - Slider for multiple images, single image, or placeholder */}
-                    {business.images && business.images.length > 0 ? (
-                      <BusinessImageSlider images={business.images} businessName={business.name} />
-                    ) : (
-                      <div className="bg-secondary aspect-video flex items-center justify-center border border-border/20 rounded-lg">
-                        <span className="text-muted-foreground text-sm">{business.name}</span>
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  /* Normal Card */
-                  <div className="bg-secondary rounded-lg p-8 min-h-[240px] flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1">
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground mb-2">
+          {/* Desktop: 4-column grid with spanning. Mobile: single column */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {businesses.map((business, index) => {
+              // Jerichem (index 0) spans 1 column
+              // Jericho Chemicals LLP (index 1) spans 2 columns
+              // Jericho Wines (index 2) spans 1 column
+              // Amaze Hospitality (index 3) spans 2 columns
+              // SR Associates (index 4) spans 2 columns
+              const colSpan = index === 1 || index === 3 || index === 4 ? 'md:col-span-2' : 'md:col-span-1'
+              
+              return (
+                <div
+                  key={business.id}
+                  className={`${colSpan} transition-all duration-500 ${
+                    expandedId === business.id
+                      ? 'fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/80'
+                      : expandedId !== null
+                      ? 'opacity-20 pointer-events-none'
+                      : ''
+                  }`}
+                >
+                  {expandedId === business.id ? (
+                    /* Expanded Card */
+                    <div className="bg-card rounded-lg p-10 max-w-3xl max-h-[90vh] overflow-y-auto relative shadow-2xl">
+                      <button
+                        onClick={() => toggleExpand(business.id)}
+                        className="absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors"
+                        aria-label="Close"
+                      >
+                        <X size={24} />
+                      </button>
+                      <h2 className="text-3xl font-bold text-foreground mb-2 pr-12">
                         {business.name}
-                      </h3>
-                      <p className="text-sm text-primary font-medium mb-4">
+                      </h2>
+                      <p className="text-sm text-primary font-medium mb-6">
                         {business.industry}
                       </p>
-                      <p className="text-muted-foreground mb-6 line-clamp-2">
-                        {business.overview}
+                      <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                        {business.description}
                       </p>
+                      {business.images && business.images.length > 0 ? (
+                        <BusinessImageSlider images={business.images} businessName={business.name} />
+                      ) : (
+                        <div className="bg-secondary aspect-video flex items-center justify-center border border-border/20 rounded-lg">
+                          <span className="text-muted-foreground text-sm">{business.name}</span>
+                        </div>
+                      )}
                     </div>
-                    <button
-                      onClick={() => toggleExpand(business.id)}
-                      className="text-primary hover:text-primary/80 font-medium underline underline-offset-4 transition-colors text-left"
-                    >
-                      Learn More
-                    </button>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Row 2: Last 2 cards - CENTERED */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {businesses.slice(3, 5).map((business) => (
-              <div
-                key={business.id}
-                className={`transition-all duration-500 ${
-                  expandedId === business.id
-                    ? 'fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/80'
-                    : expandedId !== null
-                    ? 'opacity-20 pointer-events-none'
-                    : ''
-                }`}
-              >
-                {expandedId === business.id ? (
-                  /* Expanded Card */
-                  <div className="bg-card rounded-lg p-10 max-w-3xl max-h-[90vh] overflow-y-auto relative shadow-2xl">
-                    <button
-                      onClick={() => toggleExpand(business.id)}
-                      className="absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors"
-                      aria-label="Close"
-                    >
-                      <X size={24} />
-                    </button>
-                    <h2 className="text-3xl font-bold text-foreground mb-2 pr-12">
-                      {business.name}
-                    </h2>
-                    <p className="text-sm text-primary font-medium mb-6">
-                      {business.industry}
-                    </p>
-                    <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                      {business.description}
-                    </p>
-                    {/* Image Display - Slider for multiple images, single image, or placeholder */}
-                    {business.images && business.images.length > 0 ? (
-                      <BusinessImageSlider images={business.images} businessName={business.name} />
-                    ) : (
-                      <div className="bg-secondary aspect-video flex items-center justify-center border border-border/20 rounded-lg">
-                        <span className="text-muted-foreground text-sm">{business.name}</span>
+                  ) : (
+                    /* Normal Card */
+                    <div className="bg-secondary rounded-lg p-8 min-h-[240px] flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1">
+                      <div>
+                        <h3 className="text-xl font-bold text-foreground mb-2">
+                          {business.name}
+                        </h3>
+                        <p className="text-sm text-primary font-medium mb-4">
+                          {business.industry}
+                        </p>
+                        <p className="text-muted-foreground mb-6 line-clamp-2">
+                          {business.overview}
+                        </p>
                       </div>
-                    )}
-                  </div>
-                ) : (
-                  /* Normal Card */
-                  <div className="bg-secondary rounded-lg p-8 min-h-[240px] flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1">
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground mb-2">
-                        {business.name}
-                      </h3>
-                      <p className="text-sm text-primary font-medium mb-4">
-                        {business.industry}
-                      </p>
-                      <p className="text-muted-foreground mb-6 line-clamp-2">
-                        {business.overview}
-                      </p>
+                      <button
+                        onClick={() => toggleExpand(business.id)}
+                        className="text-primary hover:text-primary/80 font-medium underline underline-offset-4 transition-colors text-left"
+                      >
+                        Learn More
+                      </button>
                     </div>
-                    <button
-                      onClick={() => toggleExpand(business.id)}
-                      className="text-primary hover:text-primary/80 font-medium underline underline-offset-4 transition-colors text-left"
-                    >
-                      Learn More
-                    </button>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
