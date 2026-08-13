@@ -193,7 +193,7 @@ export default function DistributionPage() {
               <img
                 src={slide.url}
                 alt={slide.name || `Brand ${index + 1}`}
-                className="w-full h-full object-contain md:object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
@@ -218,8 +218,8 @@ export default function DistributionPage() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-foreground text-center">
             Overview
           </h2>
-          <div className="text-base sm:text-lg text-muted-foreground leading-relaxed md:leading-loose text-center max-w-3xl md:max-w-4xl mx-auto">
-            <p className="md:text-justify md:px-8">
+          <div className="text-base sm:text-lg text-muted-foreground leading-relaxed md:leading-loose max-w-3xl md:max-w-4xl mx-auto">
+            <p className="text-justify px-4 md:px-8">
               Jericho Distributor is a leading FMCG distribution company serving the North-East region of India, partnering with established and emerging brands to expand their market presence. Backed by strategically located warehouses, a dedicated distribution network, and an experienced on-ground team, the company ensures timely and efficient supply of products across the region. With a strong presence in institutional sales, Jericho Distributor serves over 1,000+ institutions, delivering reliable logistics, consistent execution, and scalable market access for its partners.
             </p>
           </div>
@@ -275,7 +275,7 @@ export default function DistributionPage() {
                 List Your Brand
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-12 text-center">
-                Partner with us to distribute your FMCG products across North-East India
+                Partner with us to expand FMCG brands across North-East India.
               </p>
 
               {brandSuccess ? (
