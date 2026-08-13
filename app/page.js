@@ -9,7 +9,6 @@ export default function Home() {
     { name: 'Jerichem Pvt Ltd', industry: 'Detergent Manufacturing', href: '/businesses' },
     { name: 'Jericho Chemicals LLP', industry: 'Warehousing', href: '/businesses' },
     { name: 'Jericho Distributor', industry: 'Logistics and Distribution', href: '/businesses' },
-    { name: 'Allure Hospitality', industry: 'Hospitality', href: '/businesses' },
     { name: 'Amaze Hospitality', industry: 'Hospitality', href: '/businesses' },
     { name: 'SR Associates', industry: 'Consulting', href: '/businesses' },
     { name: 'Jericho Wines', industry: 'Wine Retail', href: '/businesses' },

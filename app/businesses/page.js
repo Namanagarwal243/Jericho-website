@@ -83,17 +83,6 @@ export default function BusinessesPage() {
     },
     {
       id: 5,
-      name: 'Allure Hospitality',
-      industry: 'Hospitality',
-      overview: 'Operates Dhaba Estd 1986 Delhi in collaboration with brand owners, focused on restaurant management and operations.',
-      description: 'Allure Hospitality operates Dhaba Estd 1986 Delhi in collaboration with the brand owners. The restaurant is positioned in the casual dining segment with focus on operational management and customer service. Operations are conducted under franchise or partnership arrangements with emphasis on maintaining brand standards and service consistency. The business handles day-to-day restaurant operations including kitchen management, service delivery, and facility maintenance.',
-      images: [
-        'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/75kd1r5a_Allure%20Hospitality%201.png',
-        'https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/azznv017_Allure%20Hospitality%202.jpg',
-      ],
-    },
-    {
-      id: 6,
       name: 'Amaze Hospitality',
       industry: 'Hospitality',
       overview: 'Operates Dhaba Estd 1986 and Mamagoto restaurant brands in collaboration with brand owners.',
@@ -104,7 +93,7 @@ export default function BusinessesPage() {
       ],
     },
     {
-      id: 7,
+      id: 6,
       name: 'SR Associates',
       industry: 'Consulting',
       overview: 'Partnership firm providing manpower outsourcing and consulting services to corporate clients.',
@@ -128,7 +117,7 @@ export default function BusinessesPage() {
         </div>
       </section>
 
-      {/* Businesses Grid - FORCED ROW LAYOUT: 2-3-2 */}
+      {/* Businesses Grid - BALANCED 2-2-2 LAYOUT */}
       <section className="pb-24 px-6">
         <div className="container mx-auto max-w-6xl">
           {/* Row 1: First 2 cards */}
@@ -198,9 +187,9 @@ export default function BusinessesPage() {
             ))}
           </div>
 
-          {/* Row 2: Next 3 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            {businesses.slice(2, 5).map((business) => (
+          {/* Row 2: Next 2 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            {businesses.slice(2, 4).map((business) => (
               <div
                 key={business.id}
                 className={`transition-all duration-500 ${
@@ -267,7 +256,7 @@ export default function BusinessesPage() {
 
           {/* Row 3: Last 2 cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {businesses.slice(5, 7).map((business) => (
+            {businesses.slice(4, 6).map((business) => (
               <div
                 key={business.id}
                 className={`transition-all duration-500 ${

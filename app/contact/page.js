@@ -4,7 +4,13 @@ export default function ContactPage() {
       name: 'Jericho Foods and Beverages',
       person: 'Mr. Parijat Mahanta',
       phone: '+91 9854049452',
-      email: 'parijat.mahanta@jericho.co.in',
+      email: 'parijatmahanta@jericho.co.in',
+    },
+    {
+      name: 'Jericho Distributor',
+      person: 'Mr. Priyank Jalan',
+      phone: '+91 98648 22988',
+      email: 'priyank.jalan@jericho.co.in',
     },
     {
       name: 'Jerichem Pvt Ltd',
@@ -14,18 +20,6 @@ export default function ContactPage() {
     },
     {
       name: 'Jericho Chemicals LLP',
-      person: 'Mr. Ajay Verma',
-      phone: '+91 9085903455',
-      email: 'ajay.verma@jericho.co.in',
-    },
-    {
-      name: 'Jericho Distributor',
-      person: 'Mr. Ajay Verma',
-      phone: '+91 9085903455',
-      email: 'ajay.verma@jericho.co.in',
-    },
-    {
-      name: 'Azure Hospitality',
       person: 'Mr. Ajay Verma',
       phone: '+91 9085903455',
       email: 'ajay.verma@jericho.co.in',
