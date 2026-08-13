@@ -180,20 +180,20 @@ export default function DistributionPage() {
   return (
     <div className="w-full min-h-screen bg-background">
       {/* Hero Section with Background Image Slider */}
-      <section className="relative h-[60vh] md:h-[80vh] overflow-hidden">
+      <section className="relative h-[60vh] md:h-[80vh] overflow-hidden bg-white">
         {/* Full Frame Image Slider with Fixed Height */}
-        <div className="absolute inset-0 h-full">
+        <div className="absolute inset-0 h-full bg-white">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
-              className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ${
+              className={`absolute inset-0 h-full w-full transition-opacity duration-1000 bg-white ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
             >
               <img
                 src={slide.url}
                 alt={slide.name || `Brand ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
           ))}
