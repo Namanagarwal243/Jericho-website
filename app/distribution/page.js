@@ -193,7 +193,7 @@ export default function DistributionPage() {
               <img
                 src={slide.url}
                 alt={slide.name || `Brand ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain md:object-cover"
               />
             </div>
           ))}
