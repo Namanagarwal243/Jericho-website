@@ -35,8 +35,10 @@ export default function DistributionPage() {
     { id: 1, name: 'CAMPA', url: 'https://customer-assets-0z36b82j.emergentagent.net/job_corporate-jericho/artifacts/083ipz7l_Screenshot%202026-08-13%20at%202.21.46%E2%80%AFPM.webp' },
     { id: 2, name: 'Independence', url: 'https://customer-assets-0z36b82j.emergentagent.net/job_corporate-jericho/artifacts/u71777gd_Screenshot%202026-08-13%20at%202.22.00%E2%80%AFPM.webp' },
     { id: 3, name: 'rio', url: 'https://customer-assets-0z36b82j.emergentagent.net/job_corporate-jericho/artifacts/rbug5eq1_Screenshot%202026-08-13%20at%202.22.11%E2%80%AFPM.png' },
-    { id: 4, name: 'Storia', url: 'https://customer-assets-0z36b82j.emergentagent.net/job_corporate-jericho/artifacts/jnxb9ad1_Screenshot%202026-08-13%20at%202.23.00%E2%80%AFPM.webp' },
-    { id: 5, name: 'VEEBA', url: 'https://customer-assets-0z36b82j.emergentagent.net/job_corporate-jericho/artifacts/zqxjv7lw_Screenshot%202026-08-13%20at%202.22.34%E2%80%AFPM.webp' },
+    { id: 4, name: 'Zyro', url: 'https://customer-assets-0z36b82j.emergentagent.net/job_corporate-jericho/artifacts/210cjpuq_Screenshot%202026-08-13%20at%202.22.19%E2%80%AFPM.webp' },
+    { id: 5, name: 'Storia', url: 'https://customer-assets-0z36b82j.emergentagent.net/job_corporate-jericho/artifacts/jnxb9ad1_Screenshot%202026-08-13%20at%202.23.00%E2%80%AFPM.webp' },
+    { id: 6, name: 'VEEBA', url: 'https://customer-assets-0z36b82j.emergentagent.net/job_corporate-jericho/artifacts/zqxjv7lw_Screenshot%202026-08-13%20at%202.22.34%E2%80%AFPM.webp' },
+    { id: 7, name: 'Sun Crush', url: 'https://customer-assets-0z36b82j.emergentagent.net/job_corporate-jericho/artifacts/wybaqhbu_Screenshot%202026-08-13%20at%202.22.41%E2%80%AFPM.webp' },
   ]
 
   useEffect(() => {
@@ -177,28 +179,37 @@ export default function DistributionPage() {
 
   return (
     <div className="w-full min-h-screen bg-background">
-      {/* Hero Section with Background Image */}
-      <section className="relative h-[80vh] overflow-hidden bg-gradient-to-br from-green-50 to-white">
-        {/* Image Slider - Centered and Minimized */}
-        <div className="absolute inset-0 flex items-center justify-center">
+      {/* Hero Section with Background Image Slider */}
+      <section className="relative h-[80vh] overflow-hidden">
+        {/* Full Frame Image Slider */}
+        <div className="absolute inset-0">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
-              className={`absolute transition-opacity duration-1000 ${
+              className={`absolute inset-0 transition-opacity duration-1000 ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
             >
               <img
                 src={slide.url}
                 alt={slide.name || `Brand ${index + 1}`}
-                className="w-[60vw] h-auto max-w-2xl object-contain"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
         </div>
 
-        {/* Light overlay for better visibility */}
-        <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-white/30"></div>
+        {/* Dark Overlay for text visibility */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Centered Text */}
+        <div className="relative z-20 h-full flex items-center justify-center px-4 sm:px-6">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight">
+              Jericho Distributor
+            </h1>
+          </div>
+        </div>
       </section>
 
       {/* Overview Section */}
