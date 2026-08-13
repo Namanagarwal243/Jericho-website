@@ -250,29 +250,3 @@ export default function BusinessesPage() {
     </div>
   )
 }
-xt-xl font-bold text-foreground mb-2">
-                        {business.name}
-                      </h3>
-                      <p className="text-sm text-primary font-medium mb-4">
-                        {business.industry}
-                      </p>
-                      <p className="text-muted-foreground mb-6 line-clamp-2">
-                        {business.overview}
-                      </p>
-                    </div>
-                    <button
-                      onClick={() => toggleExpand(business.id)}
-                      className="text-primary hover:text-primary/80 font-medium underline underline-offset-4 transition-colors text-left"
-                    >
-                      Learn More
-                    </button>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
