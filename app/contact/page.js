@@ -100,8 +100,7 @@ export default function ContactPage() {
                 </p>
                 <p className="text-sm sm:text-base text-foreground leading-relaxed">
                   Near House No. 43A, Momo Ghar Lane,<br />
-                  GNB Road, Ambari,<br />
-                  Guwahati, 781001
+                  GNB Road Ambari, Guwahati, 781001
                 </p>
               </div>
             </div>
@@ -122,29 +121,31 @@ export default function ContactPage() {
                 className={`${index === 0 ? 'md:col-span-2' : 'md:col-span-1'} bg-white border border-gray-200 rounded-xl p-8 shadow-md transition-all duration-300 hover:shadow-lg`}
               >
                 {/* Company Name - Centered and Larger */}
-                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4 text-center">
+                <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2 text-center">
                   {contact.name}
                 </h3>
 
-                {/* For More Details - Below Name */}
+                {/* For More Details - Closer to Name */}
                 <p className="text-sm text-primary font-semibold mb-6 text-center">
                   For more details
                 </p>
 
-                {/* Contact Person, Phone Number, and Email - All Left Aligned, Stacked */}
-                <div className="space-y-4">
+                {/* Contact Person (Left) and Phone Number (Right) - Same Line */}
+                <div className="grid grid-cols-2 gap-4 mb-4">
                   <div>
                     <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Contact Person</p>
                     <p className="text-sm text-foreground">{contact.person}</p>
                   </div>
-                  <div>
+                  <div className="text-right">
                     <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Phone Number</p>
                     <p className="text-sm text-foreground">{contact.phone}</p>
                   </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Email ID</p>
-                    <p className="text-sm text-foreground break-all">{contact.email}</p>
-                  </div>
+                </div>
+
+                {/* Email ID - Centered Below */}
+                <div className="text-center">
+                  <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Email ID</p>
+                  <p className="text-sm text-foreground break-all">{contact.email}</p>
                 </div>
               </div>
             ))}
