@@ -13,6 +13,7 @@ export default function Navigation() {
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'Flagship Business', href: '/flagship' },
+    { name: 'Distribution', href: '/distribution' },
     { name: 'Other Businesses', href: '/businesses' },
     { name: 'About Us', href: '/about' },
     { name: 'Contact Us', href: '/contact' },

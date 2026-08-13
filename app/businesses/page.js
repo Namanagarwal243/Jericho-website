@@ -64,14 +64,6 @@ export default function BusinessesPage() {
     },
     {
       id: 3,
-      name: 'Jericho Distributor',
-      industry: 'Logistics and Distribution',
-      overview: 'Engaged in institutional distribution of Consumer Packaged Goods (CPG) products through structured supply networks.',
-      description: 'Jericho Distributor operates as a partnership firm focused on the institutional distribution of Consumer Packaged Goods (CPG) products. The business manages supply chain operations connecting manufacturers with institutional buyers through established logistics networks. Operations are structured to handle bulk distribution requirements with focus on timely delivery and inventory management. The firm maintains partnerships with CPG brands to serve institutional demand across designated regions.',
-      images: ['https://customer-assets.emergentagent.com/job_corporate-jericho/artifacts/1ybja785_Jericho%20Distributor.png'],
-    },
-    {
-      id: 4,
       name: 'Jericho Wines',
       industry: 'Wine Retail',
       overview: 'Established retail liquor outlet operating since 1998, built on long-standing market presence and customer relationships.',
@@ -82,7 +74,7 @@ export default function BusinessesPage() {
       ],
     },
     {
-      id: 5,
+      id: 4,
       name: 'Amaze Hospitality',
       industry: 'Hospitality',
       overview: 'Operates Dhaba Estd 1986 and Mamagoto restaurant brands in collaboration with brand owners.',
@@ -117,12 +109,12 @@ export default function BusinessesPage() {
         </div>
       </section>
 
-      {/* Businesses Grid - BALANCED 2-2-2 LAYOUT */}
+      {/* Businesses Grid - BALANCED 3-2 LAYOUT FOR 5 BUSINESSES */}
       <section className="pb-24 px-6">
         <div className="container mx-auto max-w-6xl">
-          {/* Row 1: First 2 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            {businesses.slice(0, 2).map((business) => (
+          {/* Row 1: First 3 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            {businesses.slice(0, 3).map((business) => (
               <div
                 key={business.id}
                 className={`transition-all duration-500 ${
@@ -187,9 +179,9 @@ export default function BusinessesPage() {
             ))}
           </div>
 
-          {/* Row 2: Next 2 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            {businesses.slice(2, 4).map((business) => (
+          {/* Row 2: Last 2 cards - CENTERED */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {businesses.slice(3, 5).map((business) => (
               <div
                 key={business.id}
                 className={`transition-all duration-500 ${
@@ -253,53 +245,12 @@ export default function BusinessesPage() {
               </div>
             ))}
           </div>
-
-          {/* Row 3: Last 2 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {businesses.slice(4, 6).map((business) => (
-              <div
-                key={business.id}
-                className={`transition-all duration-500 ${
-                  expandedId === business.id
-                    ? 'fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/80'
-                    : expandedId !== null
-                    ? 'opacity-20 pointer-events-none'
-                    : ''
-                }`}
-              >
-                {expandedId === business.id ? (
-                  /* Expanded Card */
-                  <div className="bg-card rounded-lg p-10 max-w-3xl max-h-[90vh] overflow-y-auto relative shadow-2xl">
-                    <button
-                      onClick={() => toggleExpand(business.id)}
-                      className="absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors"
-                      aria-label="Close"
-                    >
-                      <X size={24} />
-                    </button>
-                    <h2 className="text-3xl font-bold text-foreground mb-2 pr-12">
-                      {business.name}
-                    </h2>
-                    <p className="text-sm text-primary font-medium mb-6">
-                      {business.industry}
-                    </p>
-                    <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                      {business.description}
-                    </p>
-                    {/* Image Display - Slider for multiple images, single image, or placeholder */}
-                    {business.images && business.images.length > 0 ? (
-                      <BusinessImageSlider images={business.images} businessName={business.name} />
-                    ) : (
-                      <div className="bg-secondary aspect-video flex items-center justify-center border border-border/20 rounded-lg">
-                        <span className="text-muted-foreground text-sm">{business.name}</span>
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  /* Normal Card */
-                  <div className="bg-secondary rounded-lg p-8 min-h-[240px] flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1">
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground mb-2">
+        </div>
+      </section>
+    </div>
+  )
+}
+xt-xl font-bold text-foreground mb-2">
                         {business.name}
                       </h3>
                       <p className="text-sm text-primary font-medium mb-4">
