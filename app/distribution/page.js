@@ -186,21 +186,21 @@ export default function DistributionPage() {
           {slides.map((slide, index) => (
             <div
               key={slide.id}
-              className={`absolute inset-0 h-full w-full transition-opacity duration-1000 bg-white ${
+              className={`absolute inset-0 h-full w-full transition-opacity duration-1000 bg-white flex items-center justify-center ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
             >
               <img
                 src={slide.url}
                 alt={slide.name || `Brand ${index + 1}`}
-                className="w-full h-full object-contain lg:object-cover"
+                className="max-w-full max-h-full object-contain lg:w-full lg:h-full lg:object-cover"
               />
             </div>
           ))}
         </div>
 
         {/* Dark Overlay for text visibility */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/40 lg:bg-black/40"></div>
 
         {/* Centered Text */}
         <div className="relative z-20 h-full flex items-center justify-center px-4 sm:px-6">
