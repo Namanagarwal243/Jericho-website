@@ -180,13 +180,13 @@ export default function DistributionPage() {
   return (
     <div className="w-full min-h-screen bg-background">
       {/* Hero Section with Background Image Slider */}
-      <section className="relative h-[80vh] overflow-hidden">
-        {/* Full Frame Image Slider */}
-        <div className="absolute inset-0">
+      <section className="relative h-[60vh] md:h-[80vh] overflow-hidden">
+        {/* Full Frame Image Slider with Fixed Height */}
+        <div className="absolute inset-0 h-full">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
+              className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ${
                 index === currentSlide ? 'opacity-100' : 'opacity-0'
               }`}
             >
@@ -219,7 +219,7 @@ export default function DistributionPage() {
             Overview
           </h2>
           <div className="text-base sm:text-lg text-muted-foreground leading-relaxed md:leading-loose max-w-3xl md:max-w-4xl mx-auto">
-            <p className="text-justify px-4 md:px-8">
+            <p className="text-justify px-4 md:px-8 leading-[1.8] md:leading-loose">
               Jericho Distributor is a leading FMCG distribution company serving the North-East region of India, partnering with established and emerging brands to expand their market presence. Backed by strategically located warehouses, a dedicated distribution network, and an experienced on-ground team, the company ensures timely and efficient supply of products across the region. With a strong presence in institutional sales, Jericho Distributor serves over 1,000+ institutions, delivering reliable logistics, consistent execution, and scalable market access for its partners.
             </p>
           </div>
