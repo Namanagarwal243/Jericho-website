@@ -3,14 +3,14 @@ export default function ContactPage() {
     {
       name: 'Jericho Foods and Beverages',
       person: 'Mr. Parijat Mahanta',
-      phone: '+91 9854049452',
-      email: 'parijatmahanta@jericho.co.in',
+      phone: '+91 7099073488',
+      email: 'hr.executive@jericho.co.in',
     },
     {
       name: 'Jericho Distributor',
       person: 'Mr. Priyank Jalan',
       phone: '+91 98648 22988',
-      email: 'priyank.jalan@jericho.co.in',
+      email: 'jerichodistributor@jericho.co.in',
     },
     {
       name: 'Jerichem Pvt Ltd',
