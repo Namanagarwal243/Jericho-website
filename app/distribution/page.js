@@ -20,7 +20,9 @@ export default function DistributionPage() {
     companyName: '',
     location: '',
     contactPerson: '',
-    mobile: ''
+    mobile: '',
+    currentBrands: '',
+    monthlySales: ''
   })
   const [brandSubmitting, setBrandSubmitting] = useState(false)
   const [supplierSubmitting, setSupplierSubmitting] = useState(false)
@@ -110,7 +112,8 @@ export default function DistributionPage() {
 
     // Validation
     if (!supplierForm.companyName || !supplierForm.location || 
-        !supplierForm.contactPerson || !supplierForm.mobile) {
+        !supplierForm.contactPerson || !supplierForm.mobile || 
+        !supplierForm.currentBrands || !supplierForm.monthlySales) {
       setSupplierError('All fields are mandatory')
       return
     }
@@ -140,7 +143,9 @@ export default function DistributionPage() {
         companyName: '',
         location: '',
         contactPerson: '',
-        mobile: ''
+        mobile: '',
+        currentBrands: '',
+        monthlySales: ''
       })
       setTimeout(() => setSupplierSuccess(false), 5000)
     } catch (error) {
@@ -240,10 +245,10 @@ export default function DistributionPage() {
       {/* Partnership Forms Section - Side by Side on Desktop/Tablet */}
       <section className="py-20 md:py-28 bg-white px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
             
             {/* List Your Brand - Brand Partnership Form */}
-            <div>
+            <div className="lg:pr-8 lg:border-r lg:border-gray-300">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-foreground text-center">
                 List Your Brand
               </h2>
@@ -370,7 +375,7 @@ export default function DistributionPage() {
             </div>
 
             {/* Supply Partnerships - Supplier Partnership Form */}
-            <div>
+            <div className="lg:pl-8">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-foreground text-center">
                 Supply Partnerships
               </h2>
@@ -441,6 +446,32 @@ export default function DistributionPage() {
                       onChange={(e) => setSupplierForm({...supplierForm, mobile: e.target.value})}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
                       placeholder="+91 XXXXXXXXXX"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Current Brands *
+                    </label>
+                    <input
+                      type="text"
+                      value={supplierForm.currentBrands}
+                      onChange={(e) => setSupplierForm({...supplierForm, currentBrands: e.target.value})}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
+                      placeholder="e.g., Brand A, Brand B"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Monthly Sales (₹) *
+                    </label>
+                    <input
+                      type="text"
+                      value={supplierForm.monthlySales}
+                      onChange={(e) => setSupplierForm({...supplierForm, monthlySales: e.target.value})}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
+                      placeholder="e.g., ₹5 Lakhs, ₹20 Lakhs"
                     />
                   </div>
 
