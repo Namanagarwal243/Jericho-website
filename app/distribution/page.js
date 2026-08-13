@@ -245,7 +245,7 @@ export default function DistributionPage() {
       {/* Partnership Forms Section - Side by Side on Desktop/Tablet */}
       <section className="py-20 md:py-28 bg-white px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-start">
             
             {/* List Your Brand - Brand Partnership Form */}
             <div className="lg:pr-8 lg:border-r lg:border-gray-300">
