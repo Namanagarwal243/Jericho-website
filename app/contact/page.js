@@ -99,8 +99,7 @@ export default function ContactPage() {
                   ADDRESS
                 </p>
                 <p className="text-sm sm:text-base text-foreground leading-relaxed">
-                  Near House No. 43A,<br />
-                  Momo Ghar Lane,<br />
+                  Near House No. 43A, Momo Ghar Lane,<br />
                   GNB Road, Ambari,<br />
                   Guwahati, 781001
                 </p>
@@ -132,8 +131,8 @@ export default function ContactPage() {
                   For more details
                 </p>
 
-                {/* Contact Person (Left) and Phone Number (Right) - Parallel */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                {/* Contact Person, Phone Number, and Email - All Left Aligned, Stacked */}
+                <div className="space-y-4">
                   <div>
                     <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Contact Person</p>
                     <p className="text-sm text-foreground">{contact.person}</p>
@@ -142,12 +141,10 @@ export default function ContactPage() {
                     <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Phone Number</p>
                     <p className="text-sm text-foreground">{contact.phone}</p>
                   </div>
-                </div>
-
-                {/* Email ID - Center Aligned */}
-                <div className="text-center mt-4">
-                  <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Email ID</p>
-                  <p className="text-sm text-foreground break-all">{contact.email}</p>
+                  <div>
+                    <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Email ID</p>
+                    <p className="text-sm text-foreground break-all">{contact.email}</p>
+                  </div>
                 </div>
               </div>
             ))}
