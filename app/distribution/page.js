@@ -237,220 +237,225 @@ export default function DistributionPage() {
         </div>
       </section>
 
-      {/* List Your Brand - Brand Partnership Form */}
+      {/* Partnership Forms Section - Side by Side on Desktop/Tablet */}
       <section className="py-20 md:py-28 bg-white px-4 sm:px-6">
-        <div className="container mx-auto max-w-2xl">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-foreground text-center">
-            List Your Brand
-          </h2>
-          <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-12 text-center">
-            Partner with us to distribute your FMCG products across North-East India
-          </p>
-
-          {brandSuccess ? (
-            <div className="bg-primary/10 border border-primary rounded-xl p-8 text-center">
-              <p className="text-lg text-foreground font-medium">
-                Thank you for your interest. Our business development team will get back to you shortly.
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            
+            {/* List Your Brand - Brand Partnership Form */}
+            <div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-foreground text-center">
+                List Your Brand
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-12 text-center">
+                Partner with us to distribute your FMCG products across North-East India
               </p>
-            </div>
-          ) : (
-            <form onSubmit={handleBrandSubmit} className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 md:p-10 shadow-lg space-y-6">
-              {brandError && (
-                <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700 text-sm">
-                  {brandError}
+
+              {brandSuccess ? (
+                <div className="bg-primary/10 border border-primary rounded-xl p-8 text-center">
+                  <p className="text-lg text-foreground font-medium">
+                    Thank you for your interest. Our business development team will get back to you shortly.
+                  </p>
                 </div>
+              ) : (
+                <form onSubmit={handleBrandSubmit} className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 md:p-10 shadow-lg space-y-6">
+                  {brandError && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700 text-sm">
+                      {brandError}
+                    </div>
+                  )}
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Company Name *
+                    </label>
+                    <input
+                      type="text"
+                      value={brandForm.companyName}
+                      onChange={(e) => setBrandForm({...brandForm, companyName: e.target.value})}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
+                      placeholder="Enter your company name"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Product Category / Product Type *
+                    </label>
+                    <input
+                      type="text"
+                      value={brandForm.productCategory}
+                      onChange={(e) => setBrandForm({...brandForm, productCategory: e.target.value})}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
+                      placeholder="e.g., Beverages, Snacks, Personal Care"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Contact Person Name *
+                    </label>
+                    <input
+                      type="text"
+                      value={brandForm.contactPerson}
+                      onChange={(e) => setBrandForm({...brandForm, contactPerson: e.target.value})}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
+                      placeholder="Full name"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-semibold text-foreground mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        value={brandForm.email}
+                        onChange={(e) => setBrandForm({...brandForm, email: e.target.value})}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
+                        placeholder="email@company.com"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-semibold text-foreground mb-2">
+                        Mobile Number *
+                      </label>
+                      <input
+                        type="tel"
+                        value={brandForm.mobile}
+                        onChange={(e) => setBrandForm({...brandForm, mobile: e.target.value})}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
+                        placeholder="+91 XXXXXXXXXX"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      State / Region Currently Operating In *
+                    </label>
+                    <input
+                      type="text"
+                      value={brandForm.stateRegion}
+                      onChange={(e) => setBrandForm({...brandForm, stateRegion: e.target.value})}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
+                      placeholder="e.g., Assam, West Bengal, Pan India"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Current Annual Sales (₹) *
+                    </label>
+                    <input
+                      type="text"
+                      value={brandForm.annualSales}
+                      onChange={(e) => setBrandForm({...brandForm, annualSales: e.target.value})}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
+                      placeholder="e.g., ₹50 Lakhs, ₹2 Crores"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={brandSubmitting}
+                    className="w-full bg-primary text-white font-semibold py-4 px-6 rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {brandSubmitting ? 'Submitting...' : 'Submit Enquiry'}
+                  </button>
+                </form>
               )}
+            </div>
 
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">
-                  Company Name *
-                </label>
-                <input
-                  type="text"
-                  value={brandForm.companyName}
-                  onChange={(e) => setBrandForm({...brandForm, companyName: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
-                  placeholder="Enter your company name"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">
-                  Product Category / Product Type *
-                </label>
-                <input
-                  type="text"
-                  value={brandForm.productCategory}
-                  onChange={(e) => setBrandForm({...brandForm, productCategory: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
-                  placeholder="e.g., Beverages, Snacks, Personal Care"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">
-                  Contact Person Name *
-                </label>
-                <input
-                  type="text"
-                  value={brandForm.contactPerson}
-                  onChange={(e) => setBrandForm({...brandForm, contactPerson: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
-                  placeholder="Full name"
-                />
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    value={brandForm.email}
-                    onChange={(e) => setBrandForm({...brandForm, email: e.target.value})}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
-                    placeholder="email@company.com"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-foreground mb-2">
-                    Mobile Number *
-                  </label>
-                  <input
-                    type="tel"
-                    value={brandForm.mobile}
-                    onChange={(e) => setBrandForm({...brandForm, mobile: e.target.value})}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
-                    placeholder="+91 XXXXXXXXXX"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">
-                  State / Region Currently Operating In *
-                </label>
-                <input
-                  type="text"
-                  value={brandForm.stateRegion}
-                  onChange={(e) => setBrandForm({...brandForm, stateRegion: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
-                  placeholder="e.g., Assam, West Bengal, Pan India"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">
-                  Current Annual Sales (₹) *
-                </label>
-                <input
-                  type="text"
-                  value={brandForm.annualSales}
-                  onChange={(e) => setBrandForm({...brandForm, annualSales: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
-                  placeholder="e.g., ₹50 Lakhs, ₹2 Crores"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={brandSubmitting}
-                className="w-full bg-primary text-white font-semibold py-4 px-6 rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {brandSubmitting ? 'Submitting...' : 'Submit Enquiry'}
-              </button>
-            </form>
-          )}
-        </div>
-      </section>
-
-      {/* Supply Partnerships - Supplier Partnership Form */}
-      <section className="py-20 md:py-28 bg-secondary/30 px-4 sm:px-6">
-        <div className="container mx-auto max-w-2xl">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-foreground text-center">
-            Supply Partnerships
-          </h2>
-          <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-12 text-center">
-            Become a vendor for Jericho Distributor
-          </p>
-
-          {supplierSuccess ? (
-            <div className="bg-primary/10 border border-primary rounded-xl p-8 text-center">
-              <p className="text-lg text-foreground font-medium">
-                Thank you for connecting with us. Our procurement team will contact you if your profile matches our requirements.
+            {/* Supply Partnerships - Supplier Partnership Form */}
+            <div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-foreground text-center">
+                Supply Partnerships
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-12 text-center">
+                Become a vendor for Jericho Distributor
               </p>
-            </div>
-          ) : (
-            <form onSubmit={handleSupplierSubmit} className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 md:p-10 shadow-lg space-y-6">
-              {supplierError && (
-                <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700 text-sm">
-                  {supplierError}
+
+              {supplierSuccess ? (
+                <div className="bg-primary/10 border border-primary rounded-xl p-8 text-center">
+                  <p className="text-lg text-foreground font-medium">
+                    Thank you for connecting with us. Our procurement team will contact you if your profile matches our requirements.
+                  </p>
                 </div>
+              ) : (
+                <form onSubmit={handleSupplierSubmit} className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 md:p-10 shadow-lg space-y-6">
+                  {supplierError && (
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700 text-sm">
+                      {supplierError}
+                    </div>
+                  )}
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Company Name *
+                    </label>
+                    <input
+                      type="text"
+                      value={supplierForm.companyName}
+                      onChange={(e) => setSupplierForm({...supplierForm, companyName: e.target.value})}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
+                      placeholder="Enter your company name"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Location (North-East India) *
+                    </label>
+                    <input
+                      type="text"
+                      value={supplierForm.location}
+                      onChange={(e) => setSupplierForm({...supplierForm, location: e.target.value})}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
+                      placeholder="City, State"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Contact Person Name *
+                    </label>
+                    <input
+                      type="text"
+                      value={supplierForm.contactPerson}
+                      onChange={(e) => setSupplierForm({...supplierForm, contactPerson: e.target.value})}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
+                      placeholder="Full name"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Mobile Number *
+                    </label>
+                    <input
+                      type="tel"
+                      value={supplierForm.mobile}
+                      onChange={(e) => setSupplierForm({...supplierForm, mobile: e.target.value})}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
+                      placeholder="+91 XXXXXXXXXX"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={supplierSubmitting}
+                    className="w-full bg-primary text-white font-semibold py-4 px-6 rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {supplierSubmitting ? 'Submitting...' : 'Submit Enquiry'}
+                  </button>
+                </form>
               )}
+            </div>
 
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">
-                  Company Name *
-                </label>
-                <input
-                  type="text"
-                  value={supplierForm.companyName}
-                  onChange={(e) => setSupplierForm({...supplierForm, companyName: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
-                  placeholder="Enter your company name"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">
-                  Location (North-East India) *
-                </label>
-                <input
-                  type="text"
-                  value={supplierForm.location}
-                  onChange={(e) => setSupplierForm({...supplierForm, location: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
-                  placeholder="City, State"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">
-                  Contact Person Name *
-                </label>
-                <input
-                  type="text"
-                  value={supplierForm.contactPerson}
-                  onChange={(e) => setSupplierForm({...supplierForm, contactPerson: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
-                  placeholder="Full name"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">
-                  Mobile Number *
-                </label>
-                <input
-                  type="tel"
-                  value={supplierForm.mobile}
-                  onChange={(e) => setSupplierForm({...supplierForm, mobile: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-foreground"
-                  placeholder="+91 XXXXXXXXXX"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={supplierSubmitting}
-                className="w-full bg-primary text-white font-semibold py-4 px-6 rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {supplierSubmitting ? 'Submitting...' : 'Submit Enquiry'}
-              </button>
-            </form>
-          )}
+          </div>
         </div>
       </section>
     </div>

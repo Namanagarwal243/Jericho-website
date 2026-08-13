@@ -9,7 +9,7 @@ export default function ContactPage() {
     {
       name: 'Jericho Distributor',
       person: 'Mr. Priyank Jalan',
-      phone: '+91 98648 22988',
+      phone: '+91 7099026243',
       email: 'jerichodistributor@jericho.co.in',
     },
     {
