@@ -355,7 +355,7 @@ export default function DistributionPage() {
 
                   <div>
                     <label className="block text-sm font-semibold text-foreground mb-2">
-                      State / Region Currently Operating In *
+                      State Currently Operating In *
                     </label>
                     <input
                       type="text"

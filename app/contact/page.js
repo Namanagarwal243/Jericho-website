@@ -130,20 +130,20 @@ export default function ContactPage() {
                   For more details
                 </p>
 
-                {/* Contact Person (Left) and Phone Number (Right) - Same Line */}
-                <div className="grid grid-cols-2 gap-4 mb-4">
+                {/* Mobile: Stack all left-aligned. Desktop: Contact Person (Left) and Phone Number (Right) - Same Line */}
+                <div className="space-y-4 md:space-y-0 md:grid md:grid-cols-2 md:gap-4 mb-4">
                   <div>
                     <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Contact Person</p>
                     <p className="text-sm text-foreground">{contact.person}</p>
                   </div>
-                  <div className="text-right">
+                  <div className="md:text-right">
                     <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Phone Number</p>
                     <p className="text-sm text-foreground">{contact.phone}</p>
                   </div>
                 </div>
 
-                {/* Email ID - Centered Below */}
-                <div className="text-center">
+                {/* Email ID - Mobile: left-aligned, Desktop: Centered Below */}
+                <div className="md:text-center">
                   <p className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">Email ID</p>
                   <p className="text-sm text-foreground break-all">{contact.email}</p>
                 </div>
